@@ -29,12 +29,20 @@
             My.Settings.executableloc = TextBox3.Text
         End If
 
+        Form1.ReloadWorldsDir()
         Me.Close()
 
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Me.Close()
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        My.Settings.isFirstRun = True
+        Application.Exit()
+
 
     End Sub
 End Class

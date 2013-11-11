@@ -23,3 +23,14 @@ C:\Users\Mike\documents\visual studio 2010\Projects\SMBXInstaller\SMBXInstaller\
 C:\Users\Mike\documents\visual studio 2010\Projects\SMBXInstaller\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Settings.resources
 C:\Users\Mike\documents\visual studio 2010\Projects\SMBXInstaller\SMBXInstaller\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Mike\documents\visual studio 2010\Projects\SMBXInstaller\SMBXInstaller\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\SMBXInstaller.exe.config
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.exe
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.xml
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.pdb
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\SMBXInstaller.exe
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\SMBXInstaller.pdb
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\SMBXInstaller.xml
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Form1.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Resources.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Settings.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbproj.GenerateResource.Cache
