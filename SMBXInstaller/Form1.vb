@@ -65,9 +65,6 @@ Public Class Form1
 
 
     End Sub
-    Public Sub ReadSections()
-
-    End Sub
 
     Public Sub ReloadWorldsDir()
         If My.Computer.FileSystem.DirectoryExists(My.Settings.worldlocation.ToString) Then
@@ -78,12 +75,8 @@ Public Class Form1
     End Sub
 
     Public Sub RefreshAllItems()
+
         ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
-
-        Dim seps As New StoryEpisodes
-
-        Dim epNames = seps.Episodes.Select(Function(x) x.EpisodeName).ToList()
-
         Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
     End Sub
 
