@@ -3,8 +3,29 @@ Imports System.IO
 Imports System.Runtime.InteropServices
 Imports System.Text
 Imports System.Xml
+Imports System.Xml.Serialization
 
 Public Class Form1
+    <Serializable()> Class StoryEpisodes
+        Property Episodes As List(Of Episode)
+
+        Public Sub New()
+            Episodes = New List(Of Episode)
+        End Sub
+    End Class
+
+    <Serializable()> Public Class Episode
+        Property EpisodeName As String
+        Property WorldName As String
+        Property Description As String
+        Property ZipSize As Long
+        Property Author As String
+        Property DownloadLink As String
+        Property ZipName As String
+
+    End Class
+
+
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -16,49 +37,13 @@ Public Class Form1
         If My.Settings.isFirstRun = True Then
             MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
             UpdateRepo()
-
+            RefreshAllItems()
             My.Settings.isFirstRun = False
 
         ElseIf My.Settings.isFirstRun = False Then
             'UpdateRepo()
+            RefreshAllItems()
         End If
-        '
-        ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
-
-        Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
-
-        '
-        Dim worldIndexIni As IniFile.IniFile
-        Dim CurrentSection As String = ""
-        Dim FromSection As String = ""
-        Dim worldIndexString As String = Environment.CurrentDirectory + "\worldIndex.ini"
-
-        Dim worldIndexStream As Stream
-        If My.Computer.FileSystem.FileExists(Environment.CurrentDirectory + "\worldIndex.ini") Then
-            Dim Sections As ArrayList = worldIndexIni.GetSections()
-            worldIndexIni = New IniFile.IniFile(Environment.CurrentDirectory + "\worldIndex.ini", False)
-            worldIndexIni.GetKeys("*")
-            worldIndexIni.Sort()
-
-            ListView1.Items.Clear()
-            'ListView1.Items.AddRange(Sections.ToArray)
-            For Each i In worldIndexIni.GetSections
-                ListView1.Items.Add(i())
-
-            Next
-
-
-
-            'Dim Sections As ListViewItem = worldIndexIni.GetSections()
-
-
-
-        End If
-
-
-
-        
-
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -67,15 +52,15 @@ Public Class Form1
 
     Public Sub UpdateRepo()
         Dim appdir As String = Environment.CurrentDirectory
-        'https://dl.dropboxusercontent.com/u/62304851/worldIndex.ini
+        'https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml
         MsgBox("Updating Repo", MsgBoxStyle.SystemModal)
-        If My.Computer.FileSystem.FileExists(appdir + "\worldIndex.ini") Then
-            My.Computer.FileSystem.DeleteFile(appdir + "\worldIndex.ini")
+        If My.Computer.FileSystem.FileExists(appdir + "\worldIndex.xml") Then
+            My.Computer.FileSystem.DeleteFile(appdir + "\worldIndex.xml")
         End If
 
-        My.Computer.Network.DownloadFile("https://dl.dropboxusercontent.com/u/62304851/worldIndex.ini", appdir + "\worldIndex.ini")
+        My.Computer.Network.DownloadFile("https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml", appdir + "\worldIndex.xml")
 
-        
+
 
 
 
@@ -90,6 +75,16 @@ Public Class Form1
         Else
             MsgBox("Directory not Found!", MsgBoxStyle.Critical)
         End If
-
     End Sub
+
+    Public Sub RefreshAllItems()
+        ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
+
+        Dim seps As New StoryEpisodes
+
+        Dim epNames = seps.Episodes.Select(Function(x) x.EpisodeName).ToList()
+
+        Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
+    End Sub
+
 End Class

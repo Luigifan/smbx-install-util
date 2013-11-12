@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StoryEpisodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Episodes>
+    <Episode>
+      <EpisodeName>The Invasion</EpisodeName>
+      <WorldName>The Invasion</WorldName>
+      <Description>The original</Description>
+      <ZipSize>622 KB</ZipSize>
+      <Author>Redigit</Author>
+      <DownloadLink>NULL EDIT LATER K</DownloadLink>
+      <ZipName>theinvasion.zip</ZipName>
+    </Episode>
+  </Episodes>
+</StoryEpisodes>
