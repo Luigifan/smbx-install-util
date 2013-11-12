@@ -5,7 +5,7 @@ Imports System.Text
 Imports System.Xml
 
 Public Class Form1
-    Dim INI_File As New IniFile(Environment.CurrentDirectory + "\worldIndex.ini")
+
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim oForm As New Settings()
@@ -20,15 +20,44 @@ Public Class Form1
             My.Settings.isFirstRun = False
 
         ElseIf My.Settings.isFirstRun = False Then
-            UpdateRepo()
+            'UpdateRepo()
+        End If
+        '
+        ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
+
+        Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
+
+        '
+        Dim worldIndexIni As IniFile.IniFile
+        Dim CurrentSection As String = ""
+        Dim FromSection As String = ""
+        Dim worldIndexString As String = Environment.CurrentDirectory + "\worldIndex.ini"
+
+        Dim worldIndexStream As Stream
+        If My.Computer.FileSystem.FileExists(Environment.CurrentDirectory + "\worldIndex.ini") Then
+            Dim Sections As ArrayList = worldIndexIni.GetSections()
+            worldIndexIni = New IniFile.IniFile(Environment.CurrentDirectory + "\worldIndex.ini", False)
+            worldIndexIni.GetKeys("*")
+            worldIndexIni.Sort()
+
+            ListView1.Items.Clear()
+            'ListView1.Items.AddRange(Sections.ToArray)
+            For Each i In worldIndexIni.GetSections
+                ListView1.Items.Add(i())
+
+            Next
+
+
+
+            'Dim Sections As ListViewItem = worldIndexIni.GetSections()
+
+
+
         End If
 
 
 
-
-        ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
-
-        Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
+        
 
     End Sub
 
