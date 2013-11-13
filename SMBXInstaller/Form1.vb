@@ -75,9 +75,39 @@ Public Class Form1
     End Sub
 
     Public Sub RefreshAllItems()
-
         ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
         Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
+
+        Dim document As XDocument = XDocument.Load(Environment.CurrentDirectory + "\worldIndex.xml")
+        For Each curElement As XElement In document...<episode>
+            Dim EpisodeName As String = curElement
+            Dim Description As String = curElement.Attribute("Description")
+            'Dim ZipSize As String = curElement.Attribute("ZipSize")
+            Dim Author As String = curElement.Attribute("Author")
+            Dim DownloadLink As String = curElement.Attribute("DownloadLink")
+            Dim ZipName As String = curElement.Attribute("ZipName")
+
+            ListBox1.Items.Add(EpisodeName)
+        Next
+
+        Dim SelectDownload As String = CStr(ListBox1.SelectedItem)
+
     End Sub
 
+    Public Sub SelectedDownload()
+        Dim SelectDownload As String = CStr(ListBox1.SelectedItem)
+        Dim document As XDocument = XDocument.Load(Environment.CurrentDirectory + "\worldIndex.xml")
+        For Each curElement As XElement In document...<episode>
+            If ListBox1.SelectedItem = Then
+            End If
+            Dim Description As String = curElement.Attribute("Description")
+
+            TextBox1.Text = Description
+
+        Next
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
+        SelectedDownload()
+    End Sub
 End Class

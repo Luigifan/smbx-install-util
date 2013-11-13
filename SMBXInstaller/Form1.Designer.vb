@@ -83,7 +83,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(13, 267)
+        Me.Button3.Location = New System.Drawing.Point(12, 267)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(96, 50)
         Me.Button3.TabIndex = 8
@@ -144,7 +144,7 @@ Partial Class Form1
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 59)
+        Me.ListBox1.Location = New System.Drawing.Point(12, 62)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(214, 199)
         Me.ListBox1.TabIndex = 15

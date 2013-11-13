@@ -1,31 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<StoryEpisodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Episodes>
-    <Episode>
-      <EpisodeName>The Invasion</EpisodeName>
-      <WorldName>The Invasion</WorldName>
-      <Description>The original</Description>
-      <ZipSize>622 KB</ZipSize>
-      <Author>Redigit</Author>
-      <DownloadLink>https://dl.dropboxusercontent.com/u/62304851/theinvasion.zip</DownloadLink>
-      <ZipName>theinvasion.zip</ZipName>
-    </Episode>
-	<Episode>
-      <EpisodeName>A Princess Cliche</EpisodeName>
-      <WorldName>A Princess Cliche</WorldName>
-      <Description>A remake of the original "Princess Cliche"</Description>
-      <ZipSize>42.51 MB</ZipSize>
-      <Author>Not Redigit</Author>
-      <DownloadLink>https://dl.dropboxusercontent.com/u/62304851/aprincesscliche.zip</DownloadLink>
-      <ZipName>aprincesscliche.zip</ZipName>
-    </Episode>
-	<Episode>
-		<EpisodeName>Example Episode</EpisodeName>
-		<Description>Wow I'm actually trying this time</Description>
-		<ZipSize>666 KB</ZipSize>
-		<Author>MrMiketheripper</Author>
-		<DownloadLink>null</DownloadLink>
-		<ZipName>exampleEpisode666.zip</ZipName>
-	</Episode>
-  </Episodes>
-</StoryEpisodes>
+<?xml version="1.0" encoding="utf-8" ?>
+<episodesList>
+	<episode Description="The Original" Author="Redigit" DownloadLink="https://dl.dropboxusercontent.com/u/62304851/theinvasion.zip" ZipName="theinvasion.zip">The Invasion</episode>
+	<episode Description="Remake of the original 'Princess Cliche'" Author="Not Redigit" DownloadLink="https://dl.dropboxusercontent.com/u/62304851/aprincesscliche.zip" ZipName="aprincesscliche.zip">A Princess Cliche</episode>
+
+
+</episodesList>
