@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>First, fill out all your Episode's details.
+     -Episode Name: The name of your episode
+     -Author: Your username or the name of the user who made it,with permission
+     -Decription: A short, one line description to describe the episode
+     -Zip Name: IMPORTANT make sure this is accurate! The name of the zip file your episode comes in
+                          with the .zip extension
+
+You want to make sure you place ALL info inside the quotation marks or your submission will NOT be validated.
+Afterwards, an submission.sub file will be generated inside the directory of this program. Send this file to me :)
+</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Yes, the DownloadLink is meant to be kept as NULL-I add that later
+When submitting, make sure you attach the .sub file (you may rename if you want as long as it has the .sub)
+and a .zip with your episode. I WILL NOT DOWNLOAD FROM SENDSPACE it simply takes too long. Screenshots are nice
+but won't be seen in the submission app.</value>
+  </data>
 </root>

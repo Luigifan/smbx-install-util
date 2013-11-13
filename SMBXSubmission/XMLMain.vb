@@ -43,6 +43,11 @@ Public Class XMLMain
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        MsgBox("Due to limitations of Visual Basic and XML, please place your strings INSIDE the quotations marks for you episode to be submitted." & vbNewLine & "Thank you!", MsgBoxStyle.Critical)
+        MsgBox("Due to limitations of Visual Basic and XML, please place your strings INSIDE the quotations marks for you episode to be submitted." & vbNewLine & "Episode names are not required to be in quotation marks" & vbNewLine & "Thank you!", MsgBoxStyle.Critical)
+    End Sub
+
+    Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton2.Click
+        Dim oForm As New Help
+        oForm.Show()
     End Sub
 End Class
