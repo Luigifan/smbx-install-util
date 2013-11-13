@@ -27,21 +27,19 @@ Partial Class XMLMain
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,6 +49,7 @@ Partial Class XMLMain
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(276, 20)
         Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = """"""
         '
         'TextBox2
         '
@@ -58,6 +57,7 @@ Partial Class XMLMain
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(276, 20)
         Me.TextBox2.TabIndex = 1
+        Me.TextBox2.Text = """"""
         '
         'TextBox3
         '
@@ -65,6 +65,7 @@ Partial Class XMLMain
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(276, 20)
         Me.TextBox3.TabIndex = 2
+        Me.TextBox3.Text = """"""
         '
         'TextBox4
         '
@@ -72,13 +73,7 @@ Partial Class XMLMain
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(276, 20)
         Me.TextBox4.TabIndex = 3
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(185, 148)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(276, 20)
-        Me.TextBox5.TabIndex = 4
+        Me.TextBox4.Text = """"""
         '
         'Label1
         '
@@ -116,48 +111,22 @@ Partial Class XMLMain
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Name of Zip (w/ .zip)"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 151)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(111, 13)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Zip Size (In KB or MB)"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(96, 196)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Help"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(264, 196)
+        Me.TextBox6.Location = New System.Drawing.Point(94, 172)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(197, 20)
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(333, 20)
         Me.TextBox6.TabIndex = 13
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(182, 201)
+        Me.Label6.Location = New System.Drawing.Point(12, 175)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Save Location"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(15, 196)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Save .XML"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'ToolStrip1
         '
@@ -195,22 +164,42 @@ Partial Class XMLMain
         Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton3.Text = "About"
         '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.SMBXSubmission.My.Resources.Resources.system_file_manager
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(433, 168)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(27, 26)
+        Me.Button1.TabIndex = 17
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.Control
+        Me.Button2.ForeColor = System.Drawing.Color.Red
+        Me.Button2.Location = New System.Drawing.Point(15, 142)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(164, 23)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "IMPORTANT PLEASE CLICK"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'XMLMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(483, 231)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.ClientSize = New System.Drawing.Size(483, 200)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
@@ -235,20 +224,18 @@ Partial Class XMLMain
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

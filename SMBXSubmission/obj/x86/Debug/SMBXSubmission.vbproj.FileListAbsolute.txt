@@ -7,3 +7,4 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SM
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.xml
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.pdb
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.XMLMain.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.Help.resources

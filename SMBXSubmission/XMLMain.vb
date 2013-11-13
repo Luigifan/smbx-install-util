@@ -3,45 +3,15 @@ Imports System.Text
 Imports System.Xml.Serialization
 
 Public Class XMLMain
-    Dim destFile As String = Environment.CurrentDirectory() + "\submission.xml"
-    <Serializable()> Class StoryEpisodes
-        Property Episodes As List(Of Episode)
-
-        Public Sub New()
-            Episodes = New List(Of Episode)
-        End Sub
-    End Class
-
-    <Serializable()> Public Class Episode
-        Property EpisodeName As String
-        Property WorldName As String
-        Property Description As String
-        Property ZipSize As String
-        Property Author As String
-        Property DownloadLink As String
-        Property ZipName As String
-
-    End Class
+    Dim destFile As String = Environment.CurrentDirectory() + "\submission.sub"
 
     Private Sub CreateExampleData()
-        Dim seps As New StoryEpisodes
-
-        seps.Episodes.Add(New Episode With {.EpisodeName = TextBox1.Text,
-                                            .Author = TextBox2.Text,
-                                            .Description = TextBox3.Text,
-                                            .DownloadLink = "NULL EDIT LATER K",
-                                            .WorldName = TextBox1.Text,
-                                            .ZipName = TextBox4.Text,
-                                            .ZipSize = TextBox5.Text})
-        
-        ' Save the data to an XML file.
-        'Dim destFile As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "epsiodes.xml")
-
-        Dim srlzr As New XmlSerializer(GetType(StoryEpisodes))
-
-        Using sw As New StreamWriter(destFile)
-            srlzr.Serialize(sw, seps)
+        'Hi guys! This is where the data is submitted!
+        Using sr As StreamWriter = New StreamWriter(destFile)
+            sr.Write("<episode Description=" + TextBox3.Text + " Author=" + TextBox2.Text + "DownloadLink=null " + "ZipName=" + TextBox4.Text + ">" + TextBox1.Text + "</episode>")
         End Using
+
+
 
     End Sub
 
@@ -55,12 +25,24 @@ Public Class XMLMain
         CreateExampleData()
     End Sub
 
-    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
     Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
         CreateExampleData()
+        MsgBox("XML Saved to " + destFile, MsgBoxStyle.Information)
+    End Sub
 
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Process.Start(Environment.CurrentDirectory)
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        MsgBox("Due to limitations of Visual Basic and XML, please place your strings INSIDE the quotations marks for you episode to be submitted." & vbNewLine & "Thank you!", MsgBoxStyle.Critical)
     End Sub
 End Class

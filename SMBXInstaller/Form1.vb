@@ -98,8 +98,7 @@ Public Class Form1
         Dim SelectDownload As String = CStr(ListBox1.SelectedItem)
         Dim document As XDocument = XDocument.Load(Environment.CurrentDirectory + "\worldIndex.xml")
         For Each curElement As XElement In document...<episode>
-            If ListBox1.SelectedItem = Then
-            End If
+           
             Dim Description As String = curElement.Attribute("Description")
 
             TextBox1.Text = Description
