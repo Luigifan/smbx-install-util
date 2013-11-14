@@ -4,29 +4,10 @@ Imports System.Runtime.InteropServices
 Imports System.Text
 Imports System.Xml
 Imports System.Xml.Serialization
+Imports Ionic.Zip
 
 Public Class Form1
-    <Serializable()> Class StoryEpisodes
-        Property Episodes As List(Of Episode)
-
-        Public Sub New()
-            Episodes = New List(Of Episode)
-        End Sub
-    End Class
-
-    <Serializable()> Public Class Episode
-        Property EpisodeName As String
-        Property WorldName As String
-        Property Description As String
-        Property ZipSize As Long
-        Property Author As String
-        Property DownloadLink As String
-        Property ZipName As String
-
-    End Class
-
-
-
+    Dim xml As New XDocument
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim oForm As New Settings()
@@ -36,34 +17,13 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If My.Settings.isFirstRun = True Then
             MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-            UpdateRepo()
-            RefreshAllItems()
             My.Settings.isFirstRun = False
+            RefreshAllItems()
+
 
         ElseIf My.Settings.isFirstRun = False Then
-            'UpdateRepo()
             RefreshAllItems()
         End If
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Public Sub UpdateRepo()
-        Dim appdir As String = Environment.CurrentDirectory
-        'https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml
-        MsgBox("Updating Repo", MsgBoxStyle.SystemModal)
-        If My.Computer.FileSystem.FileExists(appdir + "\worldIndex.xml") Then
-            My.Computer.FileSystem.DeleteFile(appdir + "\worldIndex.xml")
-        End If
-
-        My.Computer.Network.DownloadFile("https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml", appdir + "\worldIndex.xml")
-
-
-
-
-
     End Sub
 
     Public Sub ReloadWorldsDir()
@@ -76,37 +36,66 @@ Public Class Form1
 
     Public Sub RefreshAllItems()
         ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
-        Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
-
-        Dim document As XDocument = XDocument.Load(Environment.CurrentDirectory + "\worldIndex.xml")
-        For Each curElement As XElement In document...<episode>
-            Dim EpisodeName As String = curElement
-            Dim Description As String = curElement.Attribute("Description")
-            'Dim ZipSize As String = curElement.Attribute("ZipSize")
-            Dim Author As String = curElement.Attribute("Author")
-            Dim DownloadLink As String = curElement.Attribute("DownloadLink")
-            Dim ZipName As String = curElement.Attribute("ZipName")
-
-            ListBox1.Items.Add(EpisodeName)
-        Next
-
-        Dim SelectDownload As String = CStr(ListBox1.SelectedItem)
-
-    End Sub
-
-    Public Sub SelectedDownload()
-        Dim SelectDownload As String = CStr(ListBox1.SelectedItem)
-        Dim document As XDocument = XDocument.Load(Environment.CurrentDirectory + "\worldIndex.xml")
-        For Each curElement As XElement In document...<episode>
-           
-            Dim Description As String = curElement.Attribute("Description")
-
-            TextBox1.Text = Description
-
-        Next
+        xml = XDocument.Load("https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml")
+        Dim games() As String = xml...<episode>.Select(Function(n) n.Value).ToArray
+        ListBox1.DataSource = games
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
-        SelectedDownload()
+        Button3.Enabled = True
+        Dim node As XElement = xml...<episode>.First(Function(n) n.Value = ListBox1.Text)
+        TextBox1.Text = node.@Description
+        TextBox2.Text = node.@Author
+        TextBox3.Text = node.@DownloadLink
+        TextBox4.Text = node.@TechName
+        Dim ZipName As String = node.@ZipName
+        Dim req As System.Net.WebRequest = System.Net.HttpWebRequest.Create(node.@DownloadLink)
+        req.Method = "HEAD"
+    End Sub
+
+    Private Sub ListBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox2.SelectedIndexChanged
+        Button2.Enabled = True
+        Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        MsgBox("Episode will be downloaded and saved to " + My.Settings.worldlocation)
+        Dim EpisodeFolderName As String = xml...<episode>.ToString
+        Dim node As XElement = xml...<episode>.First(Function(n) n.Value = ListBox1.Text)
+        Dim ZipName As String = node.@ZipName
+        Dim TechName As String = node.@TechName
+        'MsgBox("The following episode will be download: " + ListBox1.SelectedItem() + vbNewLine + "It will be saved to " + My.Settings.worldlocation + vbNewLine + "Proceed?", MsgBoxStyle.YesNo)
+
+        Dim DownloadedFile As String = My.Settings.worldlocation + "\" + ZipName
+
+        'My.Computer.Network.DownloadFile(TextBox3.Text, My.Settings.worldlocation + "\" + ZipName, String.Empty, String.Empty, True, String.Empty, True)
+        My.Computer.Network.DownloadFile(TextBox3.Text, My.Settings.worldlocation + "\downloaded.zip", "", "", True, 30, True)
+        Dim ZiptoUnzip As String = My.Settings.worldlocation + "\downloaded.zip"
+        If My.Computer.FileSystem.DirectoryExists(EpisodeFolderName) Then
+            Dim TargetDir As String = EpisodeFolderName
+            Using zip1 As ZipFile = ZipFile.Read(ZiptoUnzip)
+                Dim entry As ZipEntry
+                For Each entry In zip1
+                    entry.Extract(EpisodeFolderName, ExtractExistingFileAction.OverwriteSilently)
+                Next
+            End Using
+            ReloadWorldsDir()
+        Else
+            My.Computer.FileSystem.CreateDirectory(My.Settings.worldlocation + "\" + TechName)
+            Dim TargetDir As String = My.Settings.worldlocation + "\" + TechName
+            Using zip1 As ZipFile = ZipFile.Read(ZiptoUnzip)
+                Dim entry As ZipEntry
+                'DEBUG MESSAGES
+                MsgBox("Extracting to " + TargetDir)
+                For Each entry In zip1
+
+                    entry.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
+                Next
+                ReloadWorldsDir()
+            End Using
+
+        End If
+        MsgBox("Episode completed extracting! Enjoy!")
     End Sub
 End Class

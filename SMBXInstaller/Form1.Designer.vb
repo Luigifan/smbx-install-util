@@ -30,16 +30,16 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(433, 2)
+        Me.Button1.Location = New System.Drawing.Point(433, 403)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -74,6 +74,7 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(242, 267)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(96, 50)
@@ -83,6 +84,7 @@ Partial Class Form1
         '
         'Button3
         '
+        Me.Button3.Enabled = False
         Me.Button3.Location = New System.Drawing.Point(12, 267)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(96, 50)
@@ -108,15 +110,6 @@ Partial Class Form1
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Author:"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 406)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 13)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Zip Size:"
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(79, 351)
@@ -133,14 +126,6 @@ Partial Class Form1
         Me.TextBox2.Size = New System.Drawing.Size(429, 20)
         Me.TextBox2.TabIndex = 13
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(79, 403)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(429, 20)
-        Me.TextBox3.TabIndex = 14
-        '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
@@ -149,16 +134,34 @@ Partial Class Form1
         Me.ListBox1.Size = New System.Drawing.Size(214, 199)
         Me.ListBox1.TabIndex = 15
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(12, 7)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(214, 20)
+        Me.TextBox3.TabIndex = 16
+        Me.TextBox3.Text = "IF YOU SEE THIS YOU ARE DEBUGGING"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(232, 7)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(214, 20)
+        Me.TextBox4.TabIndex = 17
+        Me.TextBox4.Text = "IF YOU SEE THIS YOU ARE DEBUGGING"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 492)
-        Me.Controls.Add(Me.ListBox1)
+        Me.ClientSize = New System.Drawing.Size(520, 437)
+        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
@@ -171,7 +174,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "SMBX World Manager"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -184,10 +187,10 @@ Partial Class Form1
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
 
 End Class
