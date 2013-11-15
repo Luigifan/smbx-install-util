@@ -124,6 +124,7 @@
      -Decription: A short, one line description to describe the episode
      -Zip Name: IMPORTANT make sure this is accurate! The name of the zip file your episode comes in
                           with the .zip extension
+     -Technical Name: All one word, technical string that will also be used for the folder name
 
 You want to make sure you place ALL info inside the quotation marks or your submission will NOT be validated.
 Afterwards, an submission.sub file will be generated inside the directory of this program. Send this file to me :)

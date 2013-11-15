@@ -39,6 +39,8 @@ Partial Class XMLMain
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -111,7 +113,7 @@ Partial Class XMLMain
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(94, 172)
+        Me.TextBox6.Location = New System.Drawing.Point(94, 205)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(333, 20)
@@ -120,7 +122,7 @@ Partial Class XMLMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 175)
+        Me.Label6.Location = New System.Drawing.Point(12, 208)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 14
@@ -158,7 +160,7 @@ Partial Class XMLMain
         Me.Button1.BackgroundImage = Global.SMBXSubmission.My.Resources.Resources.system_file_manager
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(433, 168)
+        Me.Button1.Location = New System.Drawing.Point(433, 201)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(27, 26)
         Me.Button1.TabIndex = 17
@@ -168,18 +170,37 @@ Partial Class XMLMain
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.Control
         Me.Button2.ForeColor = System.Drawing.Color.Red
-        Me.Button2.Location = New System.Drawing.Point(15, 142)
+        Me.Button2.Location = New System.Drawing.Point(15, 175)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(164, 23)
         Me.Button2.TabIndex = 18
         Me.Button2.Text = "IMPORTANT PLEASE CLICK"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(12, 150)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(85, 13)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Technical Name"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(185, 147)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(276, 20)
+        Me.TextBox5.TabIndex = 19
+        Me.TextBox5.Text = """"""
+        '
         'XMLMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(483, 200)
+        Me.ClientSize = New System.Drawing.Size(483, 234)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -225,5 +246,7 @@ Partial Class XMLMain
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
 
 End Class

@@ -8,7 +8,7 @@ Public Class XMLMain
     Private Sub CreateExampleData()
         'Hi guys! This is where the data is submitted!
         Using sr As StreamWriter = New StreamWriter(destFile)
-            sr.Write("<episode Description=" + TextBox3.Text + " Author=" + TextBox2.Text + "DownloadLink=null " + "ZipName=" + TextBox4.Text + ">" + TextBox1.Text + "</episode>")
+            sr.Write("<episode TechName=" + TextBox5.Text + "Description=" + TextBox3.Text + " Author=" + TextBox2.Text + "DownloadLink=null " + "ZipName=" + TextBox4.Text + ">" + TextBox1.Text + "</episode>")
         End Using
 
 

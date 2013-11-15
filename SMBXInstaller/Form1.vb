@@ -5,9 +5,12 @@ Imports System.Text
 Imports System.Xml
 Imports System.Xml.Serialization
 Imports Ionic.Zip
+Imports UpdateVB
 
 Public Class Form1
+    Public updater As New UpdateVB.UpdateVB
     Dim xml As New XDocument
+    
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim oForm As New Settings()
@@ -17,11 +20,12 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If My.Settings.isFirstRun = True Then
             MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+            My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
             My.Settings.isFirstRun = False
+            CheckForUpdates()
             RefreshAllItems()
-
-
         ElseIf My.Settings.isFirstRun = False Then
+            CheckForUpdates()
             RefreshAllItems()
         End If
     End Sub
@@ -39,6 +43,7 @@ Public Class Form1
         xml = XDocument.Load("https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml")
         Dim games() As String = xml...<episode>.Select(Function(n) n.Value).ToArray
         ListBox1.DataSource = games
+        repoUpdated.Text = "Repo Updated"
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -97,5 +102,58 @@ Public Class Form1
 
         End If
         MsgBox("Episode completed extracting! Enjoy!")
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim SelectedWorld As String = CStr(ListBox2.SelectedItem)
+        Console.Write("Going to delete " + SelectedWorld)
+        Console.WriteLine()
+        My.Computer.FileSystem.DeleteDirectory(SelectedWorld, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+        ReloadWorldsDir()
+
+
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        If Button4.Text = "Expand Debug Dialogs->" Then
+            Dim s As Size = Me.Size
+            s.Width = 947
+            Me.Size = s
+            Button4.Text = "Hide Debug Dialogs<-"
+        ElseIf Button4.Text = "Hide Debug Dialogs<-" Then
+            Dim s As Size = Me.Size
+            s.Width = 526
+            Me.Size = s
+            Button4.Text = "Expand Debug Dialogs->"
+        End If
+
+
+    End Sub
+
+    Private Sub ToolStripStatusLabel1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Public Sub CheckForUpdates()
+        Dim curver As String = My.Application.Info.Version.ToString
+        updater.checkinternet()
+        updater.checkversion("https://dl.dropboxusercontent.com/u/62304851/version_smbx.txt", curver)
+        If updater.updateavailable = True Then
+            Dim versionreader As String
+            versionreader = My.Computer.FileSystem.ReadAllText(Environment.CurrentDirectory + "\version.txt")
+
+
+            Dim result = MsgBox("Update available!" + vbNewLine + "Current Version: " + curver + vbNewLine + "Newest Version: " + versionreader + vbNewLine + "Do you wish to update?", MsgBoxStyle.YesNo)
+            If result = DialogResult.Yes Then
+                My.Computer.Network.DownloadFile("https://dl.dropboxusercontent.com/u/62304851/Update_smbx.exe", "C:\Temp\SMBX\Update.exe", "", "", True, "1000000", True)
+                Process.Start("C:\Temp\SMBX\Update.exe")
+                Me.Close()
+            ElseIf result = DialogResult.No Then
+                MsgBox("Will not update")
+            End If
+        Else
+            isUpToDate.Text = "Up to date: " + curver
+        End If
+        isUpToDate.Text = "Up to date: " + curver
     End Sub
 End Class

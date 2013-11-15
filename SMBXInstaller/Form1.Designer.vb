@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -35,6 +36,12 @@ Partial Class Form1
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.isUpToDate = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.repoUpdated = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -57,7 +64,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 30)
+        Me.Label1.Location = New System.Drawing.Point(9, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(116, 13)
         Me.Label1.TabIndex = 5
@@ -66,7 +73,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(239, 30)
+        Me.Label2.Location = New System.Drawing.Point(239, 46)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 6
@@ -136,7 +143,7 @@ Partial Class Form1
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 7)
+        Me.TextBox3.Location = New System.Drawing.Point(694, 380)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(214, 20)
@@ -145,18 +152,60 @@ Partial Class Form1
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(232, 7)
+        Me.TextBox4.Location = New System.Drawing.Point(694, 406)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(214, 20)
         Me.TextBox4.TabIndex = 17
         Me.TextBox4.Text = "IF YOU SEE THIS YOU ARE DEBUGGING"
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(362, 12)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(146, 23)
+        Me.Button4.TabIndex = 18
+        Me.Button4.Text = "Expand Debug Dialogs->"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(605, 209)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(303, 78)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = resources.GetString("Label5.Text")
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.repoUpdated})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 432)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(519, 22)
+        Me.StatusStrip1.TabIndex = 21
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'isUpToDate
+        '
+        Me.isUpToDate.Name = "isUpToDate"
+        Me.isUpToDate.Size = New System.Drawing.Size(68, 17)
+        Me.isUpToDate.Text = "isUpToDate"
+        '
+        'repoUpdated
+        '
+        Me.repoUpdated.Name = "repoUpdated"
+        Me.repoUpdated.Size = New System.Drawing.Size(76, 17)
+        Me.repoUpdated.Text = "repoUpdated"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 437)
+        Me.ClientSize = New System.Drawing.Size(519, 454)
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.ListBox1)
@@ -172,9 +221,12 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "SMBX World Manager"
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -192,5 +244,10 @@ Partial Class Form1
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents isUpToDate As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents repoUpdated As System.Windows.Forms.ToolStripStatusLabel
 
 End Class

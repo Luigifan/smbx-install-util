@@ -34,6 +34,6 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMB
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Resources.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Settings.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbproj.GenerateResource.Cache
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\IniFile.dll
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\Ionic.Zip.dll
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\UpdateVB.dll
