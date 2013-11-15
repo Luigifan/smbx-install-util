@@ -37,3 +37,8 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMB
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\Ionic.Zip.dll
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\UpdateVB.dll
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\SMBXInstaller.exe.manifest
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\SMBXInstaller.application
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.TrustInfo.xml
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.exe.manifest
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.application

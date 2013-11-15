@@ -150,10 +150,11 @@ Public Class Form1
                 Me.Close()
             ElseIf result = DialogResult.No Then
                 MsgBox("Will not update")
+                isUpToDate.Text = "New version: " + versionreader
             End If
         Else
             isUpToDate.Text = "Up to date: " + curver
         End If
-        isUpToDate.Text = "Up to date: " + curver
+
     End Sub
 End Class
