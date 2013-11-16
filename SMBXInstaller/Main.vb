@@ -7,10 +7,10 @@ Imports System.Xml.Serialization
 Imports Ionic.Zip
 Imports UpdateVB
 
-Public Class Form1
+Public Class Main
     Public updater As New UpdateVB.UpdateVB
     Dim xml As New XDocument
-    
+
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim oForm As New Settings()
@@ -24,9 +24,11 @@ Public Class Form1
             My.Settings.isFirstRun = False
             CheckForUpdates()
             RefreshAllItems()
+            Label6.Text = My.Application.Info.Version.ToString
         ElseIf My.Settings.isFirstRun = False Then
             CheckForUpdates()
             RefreshAllItems()
+            Label6.Text = My.Application.Info.Version.ToString
         End If
     End Sub
 
@@ -39,7 +41,7 @@ Public Class Form1
     End Sub
 
     Public Sub RefreshAllItems()
-        ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
+        ReloadWorldsDir()
         xml = XDocument.Load("https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml")
         Dim games() As String = xml...<episode>.Select(Function(n) n.Value).ToArray
         ListBox1.DataSource = games
@@ -145,8 +147,7 @@ Public Class Form1
 
             Dim result = MsgBox("Update available!" + vbNewLine + "Current Version: " + curver + vbNewLine + "Newest Version: " + versionreader + vbNewLine + "Do you wish to update?", MsgBoxStyle.YesNo)
             If result = DialogResult.Yes Then
-                My.Computer.Network.DownloadFile("https://dl.dropboxusercontent.com/u/62304851/Update_smbx.exe", "C:\Temp\SMBX\Update.exe", "", "", True, "1000000", True)
-                Process.Start("C:\Temp\SMBX\Update.exe")
+                Process.Start(Environment.CurrentDirectory + "\Update.exe")
                 Me.Close()
             ElseIf result = DialogResult.No Then
                 MsgBox("Will not update")
@@ -156,5 +157,14 @@ Public Class Form1
             isUpToDate.Text = "Up to date: " + curver
         End If
 
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("Update.exe")
+        Me.Close()
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        Process.Start("http://smbxsplash.tumblr.com/")
     End Sub
 End Class

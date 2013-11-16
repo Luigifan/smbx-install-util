@@ -10,13 +10,16 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         If My.Settings.isFirstRun = True Then
             SaveSettings()
-            Dim mainForm As New Form1
+            Dim mainForm As New Main
             mainForm.Show()
+
         Else
             SaveSettings()
+            Main.RefreshAllItems()
+            Main.ReloadWorldsDir()
         End If
 
-        
+
 
     End Sub
 
@@ -52,7 +55,7 @@
             My.Settings.executableloc = TextBox3.Text
         End If
 
-        Form1.ReloadWorldsDir()
+        Main.ReloadWorldsDir()
         Me.Close()
     End Sub
 End Class

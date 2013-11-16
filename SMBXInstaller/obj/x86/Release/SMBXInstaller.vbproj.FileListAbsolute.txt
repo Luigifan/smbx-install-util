@@ -6,7 +6,6 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Release\SMBXI
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Release\SMBXInstaller.xml
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Release\Ionic.Zip.dll
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Release\UpdateVB.dll
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.Form1.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.Resources.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.Settings.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.vbproj.GenerateResource.Cache
@@ -16,3 +15,5 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\S
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.xml
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.pdb
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.TrustInfo.xml
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.vbprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.Main.resources
