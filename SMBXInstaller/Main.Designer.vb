@@ -177,7 +177,7 @@ Partial Class Main
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Location = New System.Drawing.Point(605, 209)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(303, 78)
+        Me.Label5.Size = New System.Drawing.Size(305, 78)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = resources.GetString("Label5.Text")
         '
@@ -186,7 +186,7 @@ Partial Class Main
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.repoUpdated})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 460)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(521, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(920, 22)
         Me.StatusStrip1.TabIndex = 21
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -280,9 +280,8 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(521, 482)
+        Me.ClientSize = New System.Drawing.Size(920, 482)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RefreshWorlds)
         Me.Controls.Add(Me.RefreshList)

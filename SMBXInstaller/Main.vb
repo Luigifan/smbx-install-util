@@ -19,16 +19,26 @@ Public Class Main
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If My.Settings.isFirstRun = True Then
+            Dim s As Size = Me.Size
+            s.Width = 526
+            Me.Size = s
+            Button4.Text = "Expand Debug Dialogs->"
             MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-            My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+            'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
             My.Settings.isFirstRun = False
             CheckForUpdates()
             RefreshAllItems()
             Label6.Text = My.Application.Info.Version.ToString
+            
         ElseIf My.Settings.isFirstRun = False Then
+            Dim s As Size = Me.Size
+            s.Width = 526
+            Me.Size = s
+            Button4.Text = "Expand Debug Dialogs->"
             CheckForUpdates()
             RefreshAllItems()
             Label6.Text = My.Application.Info.Version.ToString
+           
         End If
     End Sub
 

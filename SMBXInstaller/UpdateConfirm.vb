@@ -29,7 +29,7 @@ Public Class UpdateConfirm
         Dim changelog As StreamReader = New StreamReader(client.OpenRead(address))
 
         RichTextBox1.Text = changelog.ReadToEnd
-        CurrentVer.Text = My.Application.Info.Version.ToString
-        NewestVer.Text = newversion.ReadToEnd
+        CurrentVer.Text = "Your version: " + My.Application.Info.Version.ToString
+        NewestVer.Text = "Newest Version: " + newversion.ReadToEnd
     End Sub
 End Class
