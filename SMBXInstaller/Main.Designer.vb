@@ -71,6 +71,7 @@ Partial Class Main
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(9, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(116, 13)
@@ -80,6 +81,7 @@ Partial Class Main
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(239, 46)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
@@ -109,6 +111,7 @@ Partial Class Main
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(10, 354)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 13)
@@ -118,6 +121,7 @@ Partial Class Main
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Location = New System.Drawing.Point(32, 408)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 13)
@@ -170,6 +174,7 @@ Partial Class Main
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Location = New System.Drawing.Point(605, 209)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(303, 78)
@@ -181,7 +186,7 @@ Partial Class Main
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.repoUpdated})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 460)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(519, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(521, 22)
         Me.StatusStrip1.TabIndex = 21
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -200,6 +205,7 @@ Partial Class Main
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Location = New System.Drawing.Point(680, 33)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(130, 13)
@@ -210,6 +216,7 @@ Partial Class Main
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(680, 62)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(39, 13)
@@ -219,6 +226,7 @@ Partial Class Main
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel2.Location = New System.Drawing.Point(680, 46)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(125, 13)
@@ -260,6 +268,7 @@ Partial Class Main
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(683, 100)
         Me.PictureBox1.Name = "PictureBox1"
@@ -271,7 +280,9 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(519, 482)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(521, 482)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RefreshWorlds)
         Me.Controls.Add(Me.RefreshList)
