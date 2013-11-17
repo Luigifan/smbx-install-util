@@ -51,7 +51,7 @@ Public Class Main
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         Button3.Enabled = True
         Dim node As XElement = xml...<episode>.First(Function(n) n.Value = ListBox1.Text)
-        TextBox1.Text = node.@Description
+        RichTextBox1.Text = node.@Description
         TextBox2.Text = node.@Author
         TextBox3.Text = node.@DownloadLink
         TextBox4.Text = node.@TechName
@@ -138,21 +138,13 @@ Public Class Main
 
     Public Sub CheckForUpdates()
         Dim curver As String = My.Application.Info.Version.ToString
+
         updater.checkinternet()
         updater.checkversion("https://dl.dropboxusercontent.com/u/62304851/version_smbx.txt", curver)
         If updater.updateavailable = True Then
-            Dim versionreader As String
-            versionreader = My.Computer.FileSystem.ReadAllText(Environment.CurrentDirectory + "\version.txt")
 
-
-            Dim result = MsgBox("Update available!" + vbNewLine + "Current Version: " + curver + vbNewLine + "Newest Version: " + versionreader + vbNewLine + "Do you wish to update?", MsgBoxStyle.YesNo)
-            If result = DialogResult.Yes Then
-                Process.Start(Environment.CurrentDirectory + "\Update.exe")
-                Me.Close()
-            ElseIf result = DialogResult.No Then
-                MsgBox("Will not update")
-                isUpToDate.Text = "New version: " + versionreader
-            End If
+            Dim oForm As New UpdateConfirm
+            oForm.ShowDialog()
         Else
             isUpToDate.Text = "Up to date: " + curver
         End If
@@ -166,5 +158,13 @@ Public Class Main
 
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         Process.Start("http://smbxsplash.tumblr.com/")
+    End Sub
+
+    Private Sub RefreshList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshList.Click
+        RefreshAllItems()
+    End Sub
+
+    Private Sub RefreshWorlds_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshWorlds.Click
+        ReloadWorldsDir()
     End Sub
 End Class

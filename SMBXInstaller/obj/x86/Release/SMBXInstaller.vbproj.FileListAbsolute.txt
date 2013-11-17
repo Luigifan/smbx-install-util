@@ -17,3 +17,4 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\S
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.TrustInfo.xml
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.vbprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.Main.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Release\SMBXInstaller.UpdateConfirm.resources

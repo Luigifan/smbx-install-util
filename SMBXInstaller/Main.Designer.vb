@@ -31,7 +31,6 @@ Partial Class Main
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -44,12 +43,17 @@ Partial Class Main
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.RefreshList = New System.Windows.Forms.Button()
+        Me.RefreshWorlds = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(433, 403)
+        Me.Button1.Location = New System.Drawing.Point(433, 434)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -114,23 +118,15 @@ Partial Class Main
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(32, 380)
+        Me.Label4.Location = New System.Drawing.Point(32, 408)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 13)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Author:"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(79, 351)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(429, 20)
-        Me.TextBox1.TabIndex = 12
-        '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(79, 377)
+        Me.TextBox2.Location = New System.Drawing.Point(79, 408)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(429, 20)
@@ -183,7 +179,7 @@ Partial Class Main
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.repoUpdated})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 432)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 460)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(519, 22)
         Me.StatusStrip1.TabIndex = 21
@@ -230,11 +226,56 @@ Partial Class Main
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Tumblr. Holds changelog"
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(79, 354)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.RichTextBox1.Size = New System.Drawing.Size(428, 48)
+        Me.RichTextBox1.TabIndex = 25
+        Me.RichTextBox1.Text = ""
+        '
+        'RefreshList
+        '
+        Me.RefreshList.BackgroundImage = CType(resources.GetObject("RefreshList.BackgroundImage"), System.Drawing.Image)
+        Me.RefreshList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RefreshList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RefreshList.Location = New System.Drawing.Point(114, 293)
+        Me.RefreshList.Name = "RefreshList"
+        Me.RefreshList.Size = New System.Drawing.Size(25, 24)
+        Me.RefreshList.TabIndex = 26
+        Me.RefreshList.UseVisualStyleBackColor = True
+        '
+        'RefreshWorlds
+        '
+        Me.RefreshWorlds.BackgroundImage = CType(resources.GetObject("RefreshWorlds.BackgroundImage"), System.Drawing.Image)
+        Me.RefreshWorlds.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.RefreshWorlds.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RefreshWorlds.Location = New System.Drawing.Point(344, 293)
+        Me.RefreshWorlds.Name = "RefreshWorlds"
+        Me.RefreshWorlds.Size = New System.Drawing.Size(25, 24)
+        Me.RefreshWorlds.TabIndex = 27
+        Me.RefreshWorlds.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(683, 100)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(64, 81)
+        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.TabStop = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(519, 454)
+        Me.ClientSize = New System.Drawing.Size(519, 482)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.RefreshWorlds)
+        Me.Controls.Add(Me.RefreshList)
+        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.LinkLabel1)
@@ -245,7 +286,6 @@ Partial Class Main
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
@@ -262,6 +302,7 @@ Partial Class Main
         Me.Text = "SMBX World Manager"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -274,7 +315,6 @@ Partial Class Main
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -287,5 +327,9 @@ Partial Class Main
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents RefreshList As System.Windows.Forms.Button
+    Friend WithEvents RefreshWorlds As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

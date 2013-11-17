@@ -146,6 +146,12 @@
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateConfirm.Designer.vb">
+      <DependentUpon>UpdateConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Main.resx">
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateConfirm.resx">
+      <DependentUpon>UpdateConfirm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
