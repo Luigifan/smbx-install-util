@@ -1,5 +1,6 @@
-﻿Public Class Settings
-
+﻿Imports Setting.IniFile
+Public Class Settings
+    Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
     Private Sub Settings_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TextBox1.Text = My.Settings.smbxpath
         TextBox2.Text = My.Settings.worldlocation
@@ -8,16 +9,12 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        If My.Settings.isFirstRun = True Then
-            SaveSettings()
-            Dim mainForm As New Main
-            mainForm.Show()
+        
+        SaveSettings()
 
-        Else
-            SaveSettings()
-            Main.RefreshAllItems()
-            Main.ReloadWorldsDir()
-        End If
+        Main.RefreshAllItems()
+        Main.ReloadWorldsDir()
+
 
 
 
@@ -29,7 +26,7 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        My.Settings.isFirstRun = True
+        settingsIni.WriteValue("Settings", "isFirstRun", "True")
         Application.Exit()
     End Sub
 
@@ -38,23 +35,10 @@
         MsgBox("Changing World Location from " + My.Settings.worldlocation + " to " + TextBox2.Text)
         MsgBox("Changing SMBX Path from " + My.Settings.executableloc + " to " + TextBox3.Text)
 
-        If TextBox1.Text = My.Settings.smbxpath Then
-
-        Else
-            My.Settings.smbxpath = TextBox1.Text
-        End If
-
-        If TextBox2.Text = My.Settings.smbxpath Then
-        Else
-            My.Settings.worldlocation = TextBox2.Text
-        End If
-
-        If TextBox3.Text = My.Settings.smbxpath Then
-        Else
-
-            My.Settings.executableloc = TextBox3.Text
-        End If
-
+        settingsIni.WriteValue("Settings", "smbxpath", TextBox1.Text)
+        settingsIni.WriteValue("Settings", "worldlocation", TextBox2.Text)
+        settingsIni.WriteValue("Settings", "executableloc", TextBox3.Text)
+       
         Main.ReloadWorldsDir()
         Me.Close()
     End Sub

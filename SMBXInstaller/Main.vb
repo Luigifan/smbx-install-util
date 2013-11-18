@@ -6,10 +6,13 @@ Imports System.Xml
 Imports System.Xml.Serialization
 Imports Ionic.Zip
 Imports UpdateVB
+Imports Setting.IniFile
 
 Public Class Main
     Public updater As New UpdateVB.UpdateVB
     Dim xml As New XDocument
+    Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
+
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -18,33 +21,78 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If My.Settings.isFirstRun = True Then
-            Dim s As Size = Me.Size
-            s.Width = 526
-            Me.Size = s
-            Button4.Text = "Expand Debug Dialogs->"
-            MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-            'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
-            My.Settings.isFirstRun = False
-            CheckForUpdates()
-            RefreshAllItems()
-            Label6.Text = My.Application.Info.Version.ToString
-            
-        ElseIf My.Settings.isFirstRun = False Then
-            Dim s As Size = Me.Size
-            s.Width = 526
-            Me.Size = s
-            Button4.Text = "Expand Debug Dialogs->"
-            CheckForUpdates()
-            RefreshAllItems()
-            Label6.Text = My.Application.Info.Version.ToString
-           
+        Dim firstRun As String
+        firstRun = settingsIni.ReadValue("Settings", "isFirstRun")
+        If My.Computer.FileSystem.FileExists(Environment.CurrentDirectory + "\programsettings.ini") Then
+            If firstRun = "True" Then
+                Dim s As Size = Me.Size
+                s.Width = 526
+                Me.Size = s
+                Button4.Text = "Expand Debug Dialogs->"
+                MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+                'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+                'My.Settings.isFirstRun = False
+                settingsIni.WriteValue("Settings", "isFirstRun", "False")
+                CheckForUpdates()
+                RefreshAllItems()
+                Label6.Text = My.Application.Info.Version.ToString
+            Else
+                Dim s As Size = Me.Size
+                s.Width = 526
+                Me.Size = s
+                Button4.Text = "Expand Debug Dialogs->"
+                CheckForUpdates()
+                RefreshAllItems()
+                Label6.Text = My.Application.Info.Version.ToString
+            End If
+        Else
+            Dim sw As New System.IO.StreamWriter(Environment.CurrentDirectory + "\programsettings.ini")
+            sw.WriteLine("[Settings]")
+            sw.WriteLine("isFirstRun=True")
+            sw.WriteLine("smbxpath=C:\SMBX")
+            sw.WriteLine("worldlocation=C:\SMBX\worlds")
+            sw.WriteLine("executableloc=C:\SMBX\smbx.exe")
+            sw.Close()
+            If firstRun = "True" Then
+                Dim s As Size = Me.Size
+                s.Width = 526
+                Me.Size = s
+                Button4.Text = "Expand Debug Dialogs->"
+                MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+                'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+                'My.Settings.isFirstRun = False
+                settingsIni.WriteValue("Settings", "isFirstRun", "False")
+                CheckForUpdates()
+                RefreshAllItems()
+                Label6.Text = My.Application.Info.Version.ToString
+            Else
+                Dim s As Size = Me.Size
+                s.Width = 526
+                Me.Size = s
+                Button4.Text = "Expand Debug Dialogs->"
+                CheckForUpdates()
+                RefreshAllItems()
+                Label6.Text = My.Application.Info.Version.ToString
+            End If
         End If
+
+
+        
+
+
+        'If My.Settings.isFirstRun = True Then
+
+
+        'ElseIf My.Settings.isFirstRun = False Then
+
+
     End Sub
 
     Public Sub ReloadWorldsDir()
-        If My.Computer.FileSystem.DirectoryExists(My.Settings.worldlocation.ToString) Then
-            ListBox2.DataSource = Directory.GetDirectories(My.Settings.worldlocation.ToString)
+        'My.Settings.worldlocation.ToString
+
+        If My.Computer.FileSystem.DirectoryExists(settingsIni.ReadValue("Settings", "worldlocation")) Then
+            ListBox2.DataSource = Directory.GetDirectories(settingsIni.ReadValue("Settings", "worldlocation"))
         Else
             MsgBox("Directory not Found!", MsgBoxStyle.Critical)
         End If
@@ -77,18 +125,18 @@ Public Class Main
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        MsgBox("Episode will be downloaded and saved to " + My.Settings.worldlocation)
+        MsgBox("Episode will be downloaded and saved to " + settingsIni.ReadValue("Settings", "worldlocation"))
         Dim EpisodeFolderName As String = xml...<episode>.ToString
         Dim node As XElement = xml...<episode>.First(Function(n) n.Value = ListBox1.Text)
         Dim ZipName As String = node.@ZipName
         Dim TechName As String = node.@TechName
         'MsgBox("The following episode will be download: " + ListBox1.SelectedItem() + vbNewLine + "It will be saved to " + My.Settings.worldlocation + vbNewLine + "Proceed?", MsgBoxStyle.YesNo)
 
-        Dim DownloadedFile As String = My.Settings.worldlocation + "\" + ZipName
+        Dim DownloadedFile As String = settingsIni.ReadValue("Settings", "worldlocation") + "\" + ZipName
 
         'My.Computer.Network.DownloadFile(TextBox3.Text, My.Settings.worldlocation + "\" + ZipName, String.Empty, String.Empty, True, String.Empty, True)
-        My.Computer.Network.DownloadFile(TextBox3.Text, My.Settings.worldlocation + "\downloaded.zip", "", "", True, 30, True)
-        Dim ZiptoUnzip As String = My.Settings.worldlocation + "\downloaded.zip"
+        My.Computer.Network.DownloadFile(TextBox3.Text, settingsIni.ReadValue("Settings", "worldlocation") + "\downloaded.zip", "", "", True, 30, True)
+        Dim ZiptoUnzip As String = settingsIni.ReadValue("Settings", "worldlocation") + "\downloaded.zip"
         If My.Computer.FileSystem.DirectoryExists(EpisodeFolderName) Then
             Dim TargetDir As String = EpisodeFolderName
             Using zip1 As ZipFile = ZipFile.Read(ZiptoUnzip)
@@ -99,8 +147,8 @@ Public Class Main
             End Using
             ReloadWorldsDir()
         Else
-            My.Computer.FileSystem.CreateDirectory(My.Settings.worldlocation + "\" + TechName)
-            Dim TargetDir As String = My.Settings.worldlocation + "\" + TechName
+            My.Computer.FileSystem.CreateDirectory(settingsIni.ReadValue("Settings", "worldlocation") + "\" + TechName)
+            Dim TargetDir As String = settingsIni.ReadValue("Settings", "worldlocation") + "\" + TechName
             Using zip1 As ZipFile = ZipFile.Read(ZiptoUnzip)
                 Dim entry As ZipEntry
                 'DEBUG MESSAGES

@@ -183,21 +183,25 @@ Partial Class Main
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.BackgroundImage = CType(resources.GetObject("StatusStrip1.BackgroundImage"), System.Drawing.Image)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.repoUpdated})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 460)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(920, 22)
+        Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 21
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'isUpToDate
         '
+        Me.isUpToDate.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.isUpToDate.Name = "isUpToDate"
         Me.isUpToDate.Size = New System.Drawing.Size(68, 17)
         Me.isUpToDate.Text = "isUpToDate"
         '
         'repoUpdated
         '
+        Me.repoUpdated.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.repoUpdated.Name = "repoUpdated"
         Me.repoUpdated.Size = New System.Drawing.Size(76, 17)
         Me.repoUpdated.Text = "repoUpdated"
@@ -280,7 +284,7 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RefreshWorlds)
