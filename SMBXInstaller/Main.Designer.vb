@@ -39,6 +39,7 @@ Partial Class Main
         Me.Label5 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.isUpToDate = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.repoUpdated = New System.Windows.Forms.ToolStripStatusLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,16 +47,24 @@ Partial Class Main
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RefreshList = New System.Windows.Forms.Button()
         Me.RefreshWorlds = New System.Windows.Forms.Button()
+        Me.Bowser = New System.Windows.Forms.PictureBox()
+        Me.Mario = New System.Windows.Forms.PictureBox()
+        Me.Luigi = New System.Windows.Forms.PictureBox()
+        Me.Toad = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.Bowser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Toad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(433, 434)
+        Me.Button1.Location = New System.Drawing.Point(15, 429)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(61, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Settings"
         Me.Button1.UseVisualStyleBackColor = True
@@ -72,9 +81,11 @@ Partial Class Main
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label1.Location = New System.Drawing.Point(9, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 13)
+        Me.Label1.Size = New System.Drawing.Size(205, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Available for Download"
         '
@@ -82,28 +93,38 @@ Partial Class Main
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(239, 46)
+        Me.Label2.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(275, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 13)
+        Me.Label2.Size = New System.Drawing.Size(88, 13)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Installed"
         '
         'Button2
         '
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(242, 267)
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Button2.Location = New System.Drawing.Point(242, 262)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 50)
+        Me.Button2.Size = New System.Drawing.Size(90, 90)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Delete Selected" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "World" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(12, 267)
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(12, 262)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 50)
+        Me.Button3.Size = New System.Drawing.Size(90, 90)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "Install Selected World"
         Me.Button3.UseVisualStyleBackColor = True
@@ -112,9 +133,10 @@ Partial Class Main
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(10, 354)
+        Me.Label3.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 389)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(115, 13)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Description:"
         '
@@ -122,18 +144,19 @@ Partial Class Main
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(32, 408)
+        Me.Label4.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(57, 413)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 13)
+        Me.Label4.Size = New System.Drawing.Size(70, 13)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Author:"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(79, 408)
+        Me.TextBox2.Location = New System.Drawing.Point(129, 408)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(429, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(378, 20)
         Me.TextBox2.TabIndex = 13
         '
         'ListBox1
@@ -184,7 +207,7 @@ Partial Class Main
         'StatusStrip1
         '
         Me.StatusStrip1.BackgroundImage = CType(resources.GetObject("StatusStrip1.BackgroundImage"), System.Drawing.Image)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.repoUpdated})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.isUpToDate, Me.ToolStripStatusLabel1, Me.repoUpdated})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 460)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(920, 22)
@@ -194,16 +217,26 @@ Partial Class Main
         '
         'isUpToDate
         '
+        Me.isUpToDate.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.isUpToDate.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.isUpToDate.Name = "isUpToDate"
-        Me.isUpToDate.Size = New System.Drawing.Size(68, 17)
+        Me.isUpToDate.Size = New System.Drawing.Size(97, 17)
         Me.isUpToDate.Text = "isUpToDate"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(25, 17)
+        Me.ToolStripStatusLabel1.Text = "--"
         '
         'repoUpdated
         '
+        Me.repoUpdated.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.repoUpdated.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.repoUpdated.Name = "repoUpdated"
-        Me.repoUpdated.Size = New System.Drawing.Size(76, 17)
+        Me.repoUpdated.Size = New System.Drawing.Size(106, 17)
         Me.repoUpdated.Text = "repoUpdated"
         '
         'LinkLabel1
@@ -240,11 +273,11 @@ Partial Class Main
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(79, 354)
+        Me.RichTextBox1.Location = New System.Drawing.Point(129, 354)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox1.Size = New System.Drawing.Size(428, 48)
+        Me.RichTextBox1.Size = New System.Drawing.Size(378, 48)
         Me.RichTextBox1.TabIndex = 25
         Me.RichTextBox1.Text = ""
         '
@@ -270,14 +303,55 @@ Partial Class Main
         Me.RefreshWorlds.TabIndex = 27
         Me.RefreshWorlds.UseVisualStyleBackColor = True
         '
+        'Bowser
+        '
+        Me.Bowser.BackColor = System.Drawing.Color.Transparent
+        Me.Bowser.Image = CType(resources.GetObject("Bowser.Image"), System.Drawing.Image)
+        Me.Bowser.Location = New System.Drawing.Point(683, 100)
+        Me.Bowser.Name = "Bowser"
+        Me.Bowser.Size = New System.Drawing.Size(64, 81)
+        Me.Bowser.TabIndex = 28
+        Me.Bowser.TabStop = False
+        '
+        'Mario
+        '
+        Me.Mario.BackColor = System.Drawing.Color.Transparent
+        Me.Mario.BackgroundImage = CType(resources.GetObject("Mario.BackgroundImage"), System.Drawing.Image)
+        Me.Mario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Mario.Location = New System.Drawing.Point(463, 267)
+        Me.Mario.Name = "Mario"
+        Me.Mario.Size = New System.Drawing.Size(32, 64)
+        Me.Mario.TabIndex = 29
+        Me.Mario.TabStop = False
+        '
+        'Luigi
+        '
+        Me.Luigi.BackColor = System.Drawing.Color.Transparent
+        Me.Luigi.BackgroundImage = CType(resources.GetObject("Luigi.BackgroundImage"), System.Drawing.Image)
+        Me.Luigi.Location = New System.Drawing.Point(182, 291)
+        Me.Luigi.Name = "Luigi"
+        Me.Luigi.Size = New System.Drawing.Size(32, 64)
+        Me.Luigi.TabIndex = 30
+        Me.Luigi.TabStop = False
+        '
+        'Toad
+        '
+        Me.Toad.BackColor = System.Drawing.Color.Transparent
+        Me.Toad.BackgroundImage = CType(resources.GetObject("Toad.BackgroundImage"), System.Drawing.Image)
+        Me.Toad.Location = New System.Drawing.Point(220, 3)
+        Me.Toad.Name = "Toad"
+        Me.Toad.Size = New System.Drawing.Size(49, 53)
+        Me.Toad.TabIndex = 31
+        Me.Toad.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(683, 100)
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(389, 262)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(64, 81)
-        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 64)
+        Me.PictureBox1.TabIndex = 32
         Me.PictureBox1.TabStop = False
         '
         'Main
@@ -287,6 +361,10 @@ Partial Class Main
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Toad)
+        Me.Controls.Add(Me.Luigi)
+        Me.Controls.Add(Me.Mario)
+        Me.Controls.Add(Me.Bowser)
         Me.Controls.Add(Me.RefreshWorlds)
         Me.Controls.Add(Me.RefreshList)
         Me.Controls.Add(Me.RichTextBox1)
@@ -316,6 +394,10 @@ Partial Class Main
         Me.Text = "SMBX World Manager"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.Bowser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Mario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Luigi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Toad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -344,6 +426,11 @@ Partial Class Main
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents RefreshList As System.Windows.Forms.Button
     Friend WithEvents RefreshWorlds As System.Windows.Forms.Button
+    Friend WithEvents Bowser As System.Windows.Forms.PictureBox
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Mario As System.Windows.Forms.PictureBox
+    Friend WithEvents Luigi As System.Windows.Forms.PictureBox
+    Friend WithEvents Toad As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

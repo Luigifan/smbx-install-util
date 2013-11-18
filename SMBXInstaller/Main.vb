@@ -225,4 +225,8 @@ Public Class Main
     Private Sub RefreshWorlds_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshWorlds.Click
         ReloadWorldsDir()
     End Sub
+
+    Public Sub ChangeAllFonts()
+
+    End Sub
 End Class
