@@ -17,7 +17,7 @@ Public Class Main
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim oForm As New Settings()
-        oForm.Show()
+        oForm.ShowDialog()
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -113,6 +113,13 @@ Public Class Main
         TextBox2.Text = node.@Author
         TextBox3.Text = node.@DownloadLink
         TextBox4.Text = node.@TechName
+        If node.@IconLoc = "null" Then
+            'IconImage.ImageLocation = "http://i.imgur.com/kY961n3.gif"
+            IconImage.Visible = False
+        Else
+            IconImage.ImageLocation = node.@IconLoc
+            IconImage.Visible = True
+        End If
         Dim ZipName As String = node.@ZipName
         Dim req As System.Net.WebRequest = System.Net.HttpWebRequest.Create(node.@DownloadLink)
         req.Method = "HEAD"
@@ -166,12 +173,8 @@ Public Class Main
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Dim SelectedWorld As String = CStr(ListBox2.SelectedItem)
-        Console.Write("Going to delete " + SelectedWorld)
-        Console.WriteLine()
         My.Computer.FileSystem.DeleteDirectory(SelectedWorld, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
         ReloadWorldsDir()
-
-
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
@@ -190,17 +193,12 @@ Public Class Main
 
     End Sub
 
-    Private Sub ToolStripStatusLabel1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Public Sub CheckForUpdates()
         Dim curver As String = My.Application.Info.Version.ToString
 
         updater.checkinternet()
         updater.checkversion("https://dl.dropboxusercontent.com/u/62304851/version_smbx.txt", curver)
         If updater.updateavailable = True Then
-
             Dim oForm As New UpdateConfirm
             oForm.ShowDialog()
         Else
@@ -224,9 +222,5 @@ Public Class Main
 
     Private Sub RefreshWorlds_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshWorlds.Click
         ReloadWorldsDir()
-    End Sub
-
-    Public Sub ChangeAllFonts()
-
     End Sub
 End Class

@@ -47,17 +47,19 @@ Partial Class Main
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RefreshList = New System.Windows.Forms.Button()
         Me.RefreshWorlds = New System.Windows.Forms.Button()
-        Me.Bowser = New System.Windows.Forms.PictureBox()
         Me.Mario = New System.Windows.Forms.PictureBox()
         Me.Luigi = New System.Windows.Forms.PictureBox()
         Me.Toad = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.IconImage = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.Bowser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Toad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -134,7 +136,7 @@ Partial Class Main
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 389)
+        Me.Label3.Location = New System.Drawing.Point(12, 357)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(115, 13)
         Me.Label3.TabIndex = 9
@@ -276,7 +278,7 @@ Partial Class Main
         Me.RichTextBox1.Location = New System.Drawing.Point(129, 354)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
         Me.RichTextBox1.Size = New System.Drawing.Size(378, 48)
         Me.RichTextBox1.TabIndex = 25
         Me.RichTextBox1.Text = ""
@@ -302,16 +304,6 @@ Partial Class Main
         Me.RefreshWorlds.Size = New System.Drawing.Size(25, 24)
         Me.RefreshWorlds.TabIndex = 27
         Me.RefreshWorlds.UseVisualStyleBackColor = True
-        '
-        'Bowser
-        '
-        Me.Bowser.BackColor = System.Drawing.Color.Transparent
-        Me.Bowser.Image = CType(resources.GetObject("Bowser.Image"), System.Drawing.Image)
-        Me.Bowser.Location = New System.Drawing.Point(683, 100)
-        Me.Bowser.Name = "Bowser"
-        Me.Bowser.Size = New System.Drawing.Size(64, 81)
-        Me.Bowser.TabIndex = 28
-        Me.Bowser.TabStop = False
         '
         'Mario
         '
@@ -354,17 +346,39 @@ Partial Class Main
         Me.PictureBox1.TabIndex = 32
         Me.PictureBox1.TabStop = False
         '
+        'IconImage
+        '
+        Me.IconImage.BackColor = System.Drawing.Color.Transparent
+        Me.IconImage.Image = CType(resources.GetObject("IconImage.Image"), System.Drawing.Image)
+        Me.IconImage.Location = New System.Drawing.Point(683, 87)
+        Me.IconImage.Margin = New System.Windows.Forms.Padding(0)
+        Me.IconImage.Name = "IconImage"
+        Me.IconImage.Size = New System.Drawing.Size(112, 100)
+        Me.IconImage.TabIndex = 38
+        Me.IconImage.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(675, 79)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(128, 116)
+        Me.PictureBox2.TabIndex = 37
+        Me.PictureBox2.TabStop = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
+        Me.Controls.Add(Me.IconImage)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Toad)
         Me.Controls.Add(Me.Luigi)
         Me.Controls.Add(Me.Mario)
-        Me.Controls.Add(Me.Bowser)
         Me.Controls.Add(Me.RefreshWorlds)
         Me.Controls.Add(Me.RefreshList)
         Me.Controls.Add(Me.RichTextBox1)
@@ -394,11 +408,12 @@ Partial Class Main
         Me.Text = "SMBX World Manager"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.Bowser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Mario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Luigi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Toad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -426,11 +441,12 @@ Partial Class Main
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents RefreshList As System.Windows.Forms.Button
     Friend WithEvents RefreshWorlds As System.Windows.Forms.Button
-    Friend WithEvents Bowser As System.Windows.Forms.PictureBox
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Mario As System.Windows.Forms.PictureBox
     Friend WithEvents Luigi As System.Windows.Forms.PictureBox
     Friend WithEvents Toad As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents IconImage As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 
 End Class

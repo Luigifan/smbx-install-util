@@ -36,7 +36,7 @@ Partial Class Settings
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 52)
+        Me.Label1.Location = New System.Drawing.Point(10, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(81, 13)
         Me.Label1.TabIndex = 0
@@ -45,7 +45,7 @@ Partial Class Settings
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 83)
+        Me.Label2.Location = New System.Drawing.Point(10, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class Settings
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 113)
+        Me.Label3.Location = New System.Drawing.Point(10, 70)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(137, 13)
         Me.Label3.TabIndex = 2
@@ -62,28 +62,28 @@ Partial Class Settings
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(159, 49)
+        Me.TextBox1.Location = New System.Drawing.Point(157, 6)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(364, 20)
         Me.TextBox1.TabIndex = 3
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(159, 110)
+        Me.TextBox2.Location = New System.Drawing.Point(157, 67)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(364, 20)
         Me.TextBox2.TabIndex = 4
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(159, 80)
+        Me.TextBox3.Location = New System.Drawing.Point(157, 37)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(364, 20)
         Me.TextBox3.TabIndex = 5
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(325, 238)
+        Me.Button1.Location = New System.Drawing.Point(315, 93)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 6
@@ -92,7 +92,7 @@ Partial Class Settings
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(406, 238)
+        Me.Button2.Location = New System.Drawing.Point(396, 93)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(127, 23)
         Me.Button2.TabIndex = 7
@@ -101,7 +101,7 @@ Partial Class Settings
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(13, 238)
+        Me.Button3.Location = New System.Drawing.Point(3, 93)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 23)
         Me.Button3.TabIndex = 8
@@ -112,7 +112,7 @@ Partial Class Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(535, 273)
+        Me.ClientSize = New System.Drawing.Size(535, 125)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -124,6 +124,7 @@ Partial Class Settings
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Settings"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -2,9 +2,9 @@
 Public Class Settings
     Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
     Private Sub Settings_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        TextBox1.Text = My.Settings.smbxpath
-        TextBox2.Text = My.Settings.worldlocation
-        TextBox3.Text = My.Settings.executableloc
+        TextBox1.Text = settingsIni.ReadValue("Settings", "smbxpath")
+        TextBox2.Text = settingsIni.ReadValue("Settings", "worldlocation")
+        TextBox3.Text = settingsIni.ReadValue("Settings", "executableloc")
 
     End Sub
 

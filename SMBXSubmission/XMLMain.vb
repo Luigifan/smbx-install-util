@@ -8,7 +8,7 @@ Public Class XMLMain
     Private Sub CreateExampleData()
         'Hi guys! This is where the data is submitted!
         Using sr As StreamWriter = New StreamWriter(destFile)
-            sr.Write("<episode TechName=" + TextBox5.Text + " Description=" + TextBox3.Text + " Author=" + TextBox2.Text + " DownloadLink=null " + " ZipName=" + TextBox4.Text + ">" + TextBox1.Text + "</episode>")
+            sr.Write("<episode " + "IconLoc=" + TextBox7.Text + " TechName=" + TextBox5.Text + " Description=" + TextBox3.Text + " Author=" + TextBox2.Text + " DownloadLink=null " + " ZipName=" + TextBox4.Text + ">" + TextBox1.Text + "</episode>")
         End Using
 
 
@@ -16,7 +16,7 @@ Public Class XMLMain
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-
+        ToolStripLabel1.Text = My.Application.Info.Version.ToString()
 
         TextBox6.Text = destFile
     End Sub

@@ -41,6 +41,9 @@ Partial Class XMLMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -113,7 +116,7 @@ Partial Class XMLMain
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(94, 205)
+        Me.TextBox6.Location = New System.Drawing.Point(92, 235)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(333, 20)
@@ -122,7 +125,7 @@ Partial Class XMLMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 208)
+        Me.Label6.Location = New System.Drawing.Point(12, 238)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 14
@@ -130,7 +133,7 @@ Partial Class XMLMain
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripLabel1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(483, 25)
@@ -160,7 +163,7 @@ Partial Class XMLMain
         Me.Button1.BackgroundImage = Global.SMBXSubmission.My.Resources.Resources.system_file_manager
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(433, 201)
+        Me.Button1.Location = New System.Drawing.Point(434, 231)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(27, 26)
         Me.Button1.TabIndex = 17
@@ -170,7 +173,7 @@ Partial Class XMLMain
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.Control
         Me.Button2.ForeColor = System.Drawing.Color.Red
-        Me.Button2.Location = New System.Drawing.Point(15, 175)
+        Me.Button2.Location = New System.Drawing.Point(15, 206)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(164, 23)
         Me.Button2.TabIndex = 18
@@ -194,11 +197,36 @@ Partial Class XMLMain
         Me.TextBox5.TabIndex = 19
         Me.TextBox5.Text = """"""
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 176)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(167, 13)
+        Me.Label7.TabIndex = 22
+        Me.Label7.Text = "Icon Location (Please Read Help)"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(185, 173)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(276, 20)
+        Me.TextBox7.TabIndex = 21
+        Me.TextBox7.Text = """"""
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(89, 22)
+        Me.ToolStripLabel1.Text = "ToolStripLabel1"
+        '
         'XMLMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(483, 234)
+        Me.ClientSize = New System.Drawing.Size(483, 267)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Button2)
@@ -223,7 +251,7 @@ Partial Class XMLMain
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "SMBX Episode INI Generator"
+        Me.Text = "SMBX Episode Sub Generator"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -248,5 +276,8 @@ Partial Class XMLMain
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
 
 End Class

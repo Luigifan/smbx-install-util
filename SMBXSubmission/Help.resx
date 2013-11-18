@@ -136,4 +136,12 @@ When submitting, make sure you attach the .sub file (you may rename if you want 
 and a .zip with your episode. I WILL NOT DOWNLOAD FROM SENDSPACE it simply takes too long. Screenshots are nice
 but won't be seen in the submission app.</value>
   </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Now you can add a custom "icon image" to your episodes.
+This icon image must be a 112x100 .gif format image.
+Please upload it to imgur and when copying the link, be sure to add
+".gif" to the end of it so it points to an image. Place that link in the paranthesis
+in the program
+</value>
+  </data>
 </root>
