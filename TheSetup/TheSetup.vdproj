@@ -15,20 +15,20 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1AD5F8F8A63C4E2AB8425449C6C42423"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_254D26FE534772E332DF0B85D45E49DD"
-        "OwnerKey" = "8:_EFE40E49F3A74417A08BC7AB915F0F3F"
+        "OwnerKey" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3D949602055EBCECD9FACFB68375376F"
-        "OwnerKey" = "8:_EFE40E49F3A74417A08BC7AB915F0F3F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_55CAAC5085054A7DB9F441EA38B5DD54"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,26 +39,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C7ABF5D3E45A4E96956F4E467693D874"
+        "MsmKey" = "8:_8C6C8E0EA7240A0170E938079ADE9EA8"
+        "OwnerKey" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A84BC06428374AC68D1BDBE672D1C0AA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EFE40E49F3A74417A08BC7AB915F0F3F"
+        "MsmKey" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_55CAAC5085054A7DB9F441EA38B5DD54"
+        "OwnerKey" = "8:_1AD5F8F8A63C4E2AB8425449C6C42423"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EFE40E49F3A74417A08BC7AB915F0F3F"
+        "OwnerKey" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,13 +76,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8C6C8E0EA7240A0170E938079ADE9EA8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_254D26FE534772E332DF0B85D45E49DD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C7ABF5D3E45A4E96956F4E467693D874"
+        "OwnerKey" = "8:_A84BC06428374AC68D1BDBE672D1C0AA"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -97,6 +109,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -113,6 +146,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -224,6 +278,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8C6C8E0EA7240A0170E938079ADE9EA8"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Setting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_8C6C8E0EA7240A0170E938079ADE9EA8"
+                    {
+                    "Name" = "8:Setting.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Setting.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -281,20 +366,20 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SMBX World Manager"
         "ProductCode" = "8:{F477E252-0783-4025-9A91-45160173A0C5}"
-        "PackageCode" = "8:{AD220E5C-84E5-4498-9645-42E46881DF67}"
+        "PackageCode" = "8:{6AAF1BCB-92D1-4B4F-BEC5-FE897069E505}"
         "UpgradeCode" = "8:{F048D9F6-613D-44F4-8464-3D548ED9298D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "InstallAllUsers" = "11:TRUE"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:Mike Santiago Inc"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Mike Santiago Inc"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -401,44 +486,44 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_21918C71D1D74F69857F4AE9F512731D"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1B107C1974CC434C8BCCB0BD04C6A570"
             {
-            "Name" = "8:SMBX World Manager"
+            "Name" = "8:SMBX Episode Submission"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_EFE40E49F3A74417A08BC7AB915F0F3F"
+            "Target" = "8:_A84BC06428374AC68D1BDBE672D1C0AA"
+            "Folder" = "8:_E3B28FB9962C41959999335643C8FA0F"
+            "WorkingFolder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
+            "Icon" = "8:_76574B676B7C4152B0AF78C9070A8B65"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4620FDC312084C8EA7B36852E56D5D9E"
+            {
+            "Name" = "8:SMBX Episode Manager"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
+            "Folder" = "8:_E3B28FB9962C41959999335643C8FA0F"
+            "WorkingFolder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
+            "Icon" = "8:_76574B676B7C4152B0AF78C9070A8B65"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_773FC21DBEE94B948DD4194BE8C9765E"
+            {
+            "Name" = "8:SMBX Episode Manager"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_D47EA3E0BA1746B58D018946D6A2C944"
             "Folder" = "8:_B92B304BBB6549FDA3FE20FD5EA0A2DA"
-            "WorkingFolder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
-            "Icon" = "8:_76574B676B7C4152B0AF78C9070A8B65"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_40DF0D4700374F6FAA2AD0796D98C947"
-            {
-            "Name" = "8:SMBX World Manger Submission App"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_55CAAC5085054A7DB9F441EA38B5DD54"
-            "Folder" = "8:_E3B28FB9962C41959999335643C8FA0F"
-            "WorkingFolder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
-            "Icon" = "8:_76574B676B7C4152B0AF78C9070A8B65"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5432FBB49A524B02B7067526B5802D3A"
-            {
-            "Name" = "8:SMBX World Manager"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_EFE40E49F3A74417A08BC7AB915F0F3F"
-            "Folder" = "8:_E3B28FB9962C41959999335643C8FA0F"
             "WorkingFolder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
             "Icon" = "8:_76574B676B7C4152B0AF78C9070A8B65"
             "Feature" = "8:"
@@ -842,7 +927,35 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_55CAAC5085054A7DB9F441EA38B5DD54"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1AD5F8F8A63C4E2AB8425449C6C42423"
+            {
+            "SourcePath" = "8:..\\SMBXUpdater\\obj\\x86\\Release\\Update.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A84BC06428374AC68D1BDBE672D1C0AA"
             {
             "SourcePath" = "8:..\\SMBXSubmission\\obj\\x86\\Release\\SMBXSubmission.exe"
             "TargetName" = "8:"
@@ -870,35 +983,7 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C7ABF5D3E45A4E96956F4E467693D874"
-            {
-            "SourcePath" = "8:..\\SMBXUpdater\\obj\\x86\\Release\\Update.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_17234D2E5021459C9D0B0D575FAAAD2B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Release|x86"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_EFE40E49F3A74417A08BC7AB915F0F3F"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D47EA3E0BA1746B58D018946D6A2C944"
             {
             "SourcePath" = "8:..\\SMBXInstaller\\obj\\x86\\Release\\SMBXInstaller.exe"
             "TargetName" = "8:"
@@ -918,7 +1003,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Release|x86"
+            "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{6C0E0164-52BA-4432-B2BF-BF982F88569E}"
             "ShowKeyOutput" = "11:TRUE"

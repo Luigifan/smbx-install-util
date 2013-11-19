@@ -83,11 +83,11 @@ Partial Class Main
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label1.Location = New System.Drawing.Point(9, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(205, 13)
+        Me.Label1.Size = New System.Drawing.Size(101, 12)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Available for Download"
         '
@@ -95,10 +95,10 @@ Partial Class Main
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(275, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 13)
+        Me.Label2.Size = New System.Drawing.Size(40, 12)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Installed"
         '
@@ -135,10 +135,10 @@ Partial Class Main
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(12, 357)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(115, 13)
+        Me.Label3.Size = New System.Drawing.Size(55, 12)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Description:"
         '
@@ -146,10 +146,10 @@ Partial Class Main
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(57, 413)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 13)
+        Me.Label4.Size = New System.Drawing.Size(36, 12)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Author:"
         '
@@ -219,26 +219,26 @@ Partial Class Main
         '
         'isUpToDate
         '
-        Me.isUpToDate.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.isUpToDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.isUpToDate.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.isUpToDate.Name = "isUpToDate"
-        Me.isUpToDate.Size = New System.Drawing.Size(97, 17)
+        Me.isUpToDate.Size = New System.Drawing.Size(54, 17)
         Me.isUpToDate.Text = "isUpToDate"
         '
         'ToolStripStatusLabel1
         '
-        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(25, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(11, 17)
         Me.ToolStripStatusLabel1.Text = "--"
         '
         'repoUpdated
         '
-        Me.repoUpdated.Font = New System.Drawing.Font("Emulogic", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.repoUpdated.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.repoUpdated.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.repoUpdated.Name = "repoUpdated"
-        Me.repoUpdated.Size = New System.Drawing.Size(106, 17)
+        Me.repoUpdated.Size = New System.Drawing.Size(58, 17)
         Me.repoUpdated.Text = "repoUpdated"
         '
         'LinkLabel1
@@ -349,7 +349,6 @@ Partial Class Main
         'IconImage
         '
         Me.IconImage.BackColor = System.Drawing.Color.Transparent
-        Me.IconImage.Image = CType(resources.GetObject("IconImage.Image"), System.Drawing.Image)
         Me.IconImage.Location = New System.Drawing.Point(683, 87)
         Me.IconImage.Margin = New System.Windows.Forms.Padding(0)
         Me.IconImage.Name = "IconImage"

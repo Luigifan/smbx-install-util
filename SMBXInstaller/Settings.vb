@@ -1,7 +1,7 @@
 ﻿Imports Setting.IniFile
 Public Class Settings
     Dim AppDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
-    Dim settingsIni As New Setting.IniFile(AppDataFolder + "\SMBXInstaller\programsettings.ini")
+    Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
     Private Sub Settings_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TextBox1.Text = settingsIni.ReadValue("Settings", "smbxpath")
         TextBox2.Text = settingsIni.ReadValue("Settings", "worldlocation")
