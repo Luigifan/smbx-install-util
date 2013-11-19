@@ -1,6 +1,7 @@
 ﻿Imports Setting.IniFile
 Public Class Settings
-    Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
+    Dim AppDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+    Dim settingsIni As New Setting.IniFile(AppDataFolder + "\SMBXInstaller\programsettings.ini")
     Private Sub Settings_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TextBox1.Text = settingsIni.ReadValue("Settings", "smbxpath")
         TextBox2.Text = settingsIni.ReadValue("Settings", "worldlocation")
@@ -9,7 +10,7 @@ Public Class Settings
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        
+
         SaveSettings()
 
         Main.RefreshAllItems()
@@ -38,7 +39,7 @@ Public Class Settings
         settingsIni.WriteValue("Settings", "smbxpath", TextBox1.Text)
         settingsIni.WriteValue("Settings", "worldlocation", TextBox2.Text)
         settingsIni.WriteValue("Settings", "executableloc", TextBox3.Text)
-       
+
         Main.ReloadWorldsDir()
         Me.Close()
     End Sub

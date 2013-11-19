@@ -11,7 +11,9 @@ Imports Setting.IniFile
 Public Class Main
     Public updater As New UpdateVB.UpdateVB
     Dim xml As New XDocument
-    Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
+    Dim AppDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+    'Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
+    Dim settingsIni As New Setting.IniFile(AppDataFolder + "\SMBXInstaller\programsettings.ini")
 
 
 
@@ -23,61 +25,118 @@ Public Class Main
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim firstRun As String
         firstRun = settingsIni.ReadValue("Settings", "isFirstRun")
-        If My.Computer.FileSystem.FileExists(Environment.CurrentDirectory + "\programsettings.ini") Then
-            If firstRun = "True" Then
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
-                MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-                'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
-                'My.Settings.isFirstRun = False
-                settingsIni.WriteValue("Settings", "isFirstRun", "False")
-                CheckForUpdates()
-                RefreshAllItems()
-                Label6.Text = My.Application.Info.Version.ToString
+        If My.Computer.FileSystem.DirectoryExists(AppDataFolder + "\SMBXInstaller") Then
+            If My.Computer.FileSystem.FileExists(AppDataFolder + "\SMBXInstaller\programsettings.ini") Then
+                If firstRun = "True" Then
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+                    'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+                    'My.Settings.isFirstRun = False
+                    settingsIni.WriteValue("Settings", "isFirstRun", "False")
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                Else
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                End If
             Else
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
-                CheckForUpdates()
-                RefreshAllItems()
-                Label6.Text = My.Application.Info.Version.ToString
+                Dim sw As New System.IO.StreamWriter(AppDataFolder + "\SMBXInstaller\programsettings.ini")
+                sw.WriteLine("[Settings]")
+                sw.WriteLine("isFirstRun=True")
+                sw.WriteLine("smbxpath=C:\SMBX")
+                sw.WriteLine("worldlocation=C:\SMBX\worlds")
+                sw.WriteLine("executableloc=C:\SMBX\smbx.exe")
+                sw.Close()
+                If firstRun = "True" Then
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+                    'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+                    'My.Settings.isFirstRun = False
+                    settingsIni.WriteValue("Settings", "isFirstRun", "False")
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                Else
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                End If
             End If
         Else
-            Dim sw As New System.IO.StreamWriter(Environment.CurrentDirectory + "\programsettings.ini")
-            sw.WriteLine("[Settings]")
-            sw.WriteLine("isFirstRun=True")
-            sw.WriteLine("smbxpath=C:\SMBX")
-            sw.WriteLine("worldlocation=C:\SMBX\worlds")
-            sw.WriteLine("executableloc=C:\SMBX\smbx.exe")
-            sw.Close()
-            If firstRun = "True" Then
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
-                MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-                'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
-                'My.Settings.isFirstRun = False
-                settingsIni.WriteValue("Settings", "isFirstRun", "False")
-                CheckForUpdates()
-                RefreshAllItems()
-                Label6.Text = My.Application.Info.Version.ToString
+            My.Computer.FileSystem.CreateDirectory(AppDataFolder + "\SMBXInstaller")
+            If My.Computer.FileSystem.FileExists(AppDataFolder + "\SMBXInstaller\programsettings.ini") Then
+                If firstRun = "True" Then
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+                    'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+                    'My.Settings.isFirstRun = False
+                    settingsIni.WriteValue("Settings", "isFirstRun", "False")
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                Else
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                End If
             Else
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
-                CheckForUpdates()
-                RefreshAllItems()
-                Label6.Text = My.Application.Info.Version.ToString
+                Dim sw As New System.IO.StreamWriter(AppDataFolder + "\SMBXInstaller\programsettings.ini")
+                sw.WriteLine("[Settings]")
+                sw.WriteLine("isFirstRun=True")
+                sw.WriteLine("smbxpath=C:\SMBX")
+                sw.WriteLine("worldlocation=C:\SMBX\worlds")
+                sw.WriteLine("executableloc=C:\SMBX\smbx.exe")
+                sw.Close()
+                If firstRun = "True" Then
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
+                    'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
+                    'My.Settings.isFirstRun = False
+                    settingsIni.WriteValue("Settings", "isFirstRun", "False")
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                Else
+                    Dim s As Size = Me.Size
+                    s.Width = 526
+                    Me.Size = s
+                    Button4.Text = "Expand Debug Dialogs->"
+                    CheckForUpdates()
+                    RefreshAllItems()
+                    Label6.Text = My.Application.Info.Version.ToString
+                End If
             End If
         End If
-
-
         
+
+
+
 
 
         'If My.Settings.isFirstRun = True Then
