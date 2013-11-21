@@ -39,3 +39,4 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\bin\Debug\Setting
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Main.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.test.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.UpdateConfirm.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbprojResolveAssemblyReference.cache

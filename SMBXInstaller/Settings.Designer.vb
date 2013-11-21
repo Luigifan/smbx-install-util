@@ -45,7 +45,7 @@ Partial Class Settings
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(10, 40)
+        Me.Label2.Location = New System.Drawing.Point(13, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 1
@@ -69,14 +69,14 @@ Partial Class Settings
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(157, 67)
+        Me.TextBox2.Location = New System.Drawing.Point(157, 37)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(364, 20)
         Me.TextBox2.TabIndex = 4
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(157, 37)
+        Me.TextBox3.Location = New System.Drawing.Point(157, 67)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(364, 20)
         Me.TextBox3.TabIndex = 5
