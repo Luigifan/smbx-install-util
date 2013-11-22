@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 Imports System.Text
 Imports System.Xml.Serialization
 
@@ -8,7 +8,7 @@ Public Class XMLMain
     Private Sub CreateExampleData()
         'Hi guys! This is where the data is submitted!
         Using sr As StreamWriter = New StreamWriter(destFile)
-            sr.Write("<episode " + "IconLoc=" + TextBox7.Text + " TechName=" + TextBox5.Text + " Description=" + TextBox3.Text + " Author=" + TextBox2.Text + " DownloadLink=null " + " ZipName=" + TextBox4.Text + ">" + TextBox1.Text + "</episode>")
+            sr.Write("<episode " + "IconLoc=""" + TextBox7.Text + """ TechName=""" + TextBox5.Text + """ Description=""" + TextBox3.Text + """ Author=""" + TextBox2.Text + " DownloadLink=null " + " ZipName=""" + TextBox4.Text + """>" + TextBox1.Text + "</episode>")
         End Using
 
 
@@ -42,12 +42,16 @@ Public Class XMLMain
         Process.Start(Environment.CurrentDirectory)
     End Sub
 
-    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox("Due to limitations of Visual Basic and XML, please place your strings INSIDE the quotations marks for you episode to be submitted." & vbNewLine & "Episode names are not required to be in quotation marks" & vbNewLine & "Thank you!", MsgBoxStyle.Critical)
     End Sub
 
     Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton2.Click
         Dim oForm As New Help
         oForm.Show()
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class
