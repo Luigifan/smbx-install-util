@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class XMLMain
     Inherits System.Windows.Forms.Form
 
@@ -37,13 +37,12 @@ Partial Class XMLMain
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +59,6 @@ Partial Class XMLMain
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(276, 20)
         Me.TextBox2.TabIndex = 1
-        Me.TextBox2.Text = """"""
         '
         'TextBox3
         '
@@ -68,7 +66,6 @@ Partial Class XMLMain
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(276, 20)
         Me.TextBox3.TabIndex = 2
-        Me.TextBox3.Text = """"""
         '
         'TextBox4
         '
@@ -76,7 +73,6 @@ Partial Class XMLMain
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(276, 20)
         Me.TextBox4.TabIndex = 3
-        Me.TextBox4.Text = """"""
         '
         'Label1
         '
@@ -116,7 +112,7 @@ Partial Class XMLMain
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(92, 235)
+        Me.TextBox6.Location = New System.Drawing.Point(95, 216)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(333, 20)
@@ -125,7 +121,7 @@ Partial Class XMLMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 238)
+        Me.Label6.Location = New System.Drawing.Point(15, 219)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 14
@@ -158,27 +154,22 @@ Partial Class XMLMain
         Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton2.Text = "Help"
         '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(89, 22)
+        Me.ToolStripLabel1.Text = "ToolStripLabel1"
+        '
         'Button1
         '
         Me.Button1.BackgroundImage = Global.SMBXSubmission.My.Resources.Resources.system_file_manager
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(434, 231)
+        Me.Button1.Location = New System.Drawing.Point(437, 212)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(27, 26)
         Me.Button1.TabIndex = 17
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Control
-        Me.Button2.ForeColor = System.Drawing.Color.Red
-        Me.Button2.Location = New System.Drawing.Point(15, 206)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 23)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "IMPORTANT PLEASE CLICK"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -195,7 +186,6 @@ Partial Class XMLMain
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(276, 20)
         Me.TextBox5.TabIndex = 19
-        Me.TextBox5.Text = """"""
         '
         'Label7
         '
@@ -212,13 +202,6 @@ Partial Class XMLMain
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(276, 20)
         Me.TextBox7.TabIndex = 21
-        Me.TextBox7.Text = """"""
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(89, 22)
-        Me.ToolStripLabel1.Text = "ToolStripLabel1"
         '
         'XMLMain
         '
@@ -229,7 +212,6 @@ Partial Class XMLMain
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label6)
@@ -273,7 +255,6 @@ Partial Class XMLMain
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
