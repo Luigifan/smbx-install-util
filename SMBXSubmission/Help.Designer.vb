@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Help
     Inherits System.Windows.Forms.Form
 
@@ -41,9 +41,9 @@ Partial Class Help
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(444, 286)
+        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(444, 276)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -74,14 +74,14 @@ Partial Class Help
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(529, 130)
+        Me.Label1.Size = New System.Drawing.Size(515, 104)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = resources.GetString("Label1.Text")
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(15, 149)
+        Me.LinkLabel1.Location = New System.Drawing.Point(15, 123)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(49, 13)
         Me.LinkLabel1.TabIndex = 2
@@ -91,7 +91,7 @@ Partial Class Help
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(70, 149)
+        Me.LinkLabel2.Location = New System.Drawing.Point(70, 123)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(95, 13)
         Me.LinkLabel2.TabIndex = 3
@@ -101,7 +101,7 @@ Partial Class Help
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 166)
+        Me.Label2.Location = New System.Drawing.Point(12, 145)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(586, 52)
         Me.Label2.TabIndex = 4
@@ -110,17 +110,18 @@ Partial Class Help
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(15, 229)
+        Me.Label3.Location = New System.Drawing.Point(12, 210)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 13)
+        Me.Label3.Size = New System.Drawing.Size(139, 16)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "NEW! PLEASE READ"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 253)
+        Me.Label4.Location = New System.Drawing.Point(12, 237)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(372, 65)
         Me.Label4.TabIndex = 6
@@ -132,7 +133,7 @@ Partial Class Help
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(602, 327)
+        Me.ClientSize = New System.Drawing.Size(602, 317)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
