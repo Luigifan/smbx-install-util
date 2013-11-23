@@ -6,6 +6,12 @@ Public Class Settings
         TextBox1.Text = settingsIni.ReadValue("Settings", "smbxpath")
         TextBox2.Text = settingsIni.ReadValue("Settings", "worldlocation")
         TextBox3.Text = settingsIni.ReadValue("Settings", "executableloc")
+        If My.Settings.enableDebug = True Then
+            RadioButton1.Checked = True
+        ElseIf My.Settings.enableDebug = False Then
+            'RadioButton1.Checked = False
+            RadioButton2.Checked = True
+        End If
 
     End Sub
 
@@ -32,13 +38,21 @@ Public Class Settings
     End Sub
 
     Public Sub SaveSettings()
-        MsgBox("Changing SMBX Path from " + My.Settings.smbxpath + " to " + TextBox1.Text)
-        MsgBox("Changing World Location from " + My.Settings.worldlocation + " to " + TextBox2.Text)
-        MsgBox("Changing SMBX Path from " + My.Settings.executableloc + " to " + TextBox3.Text)
+        'MsgBox("Changing SMBX Path from " + My.Settings.smbxpath + " to " + TextBox1.Text)
+        'MsgBox("Changing World Location from " + My.Settings.worldlocation + " to " + TextBox2.Text)
+        'MsgBox("Changing SMBX Path from " + My.Settings.executableloc + " to " + TextBox3.Text)
 
         settingsIni.WriteValue("Settings", "smbxpath", TextBox1.Text)
         settingsIni.WriteValue("Settings", "worldlocation", TextBox2.Text)
         settingsIni.WriteValue("Settings", "executableloc", TextBox3.Text)
+
+        If RadioButton1.Checked = True Then
+            My.Settings.enableDebug = True
+            Main.Button4.Visible = True
+        ElseIf RadioButton2.Checked = True Then
+            My.Settings.enableDebug = False
+            Main.Button4.Visible = False
+        End If
 
         Main.ReloadWorldsDir()
         Me.Close()

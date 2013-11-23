@@ -56,49 +56,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property isFirstRun() As Boolean
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property enableDebug() As Boolean
             Get
-                Return CType(Me("isFirstRun"),Boolean)
+                Return CType(Me("enableDebug"),Boolean)
             End Get
             Set
-                Me("isFirstRun") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\SMBX")>  _
-        Public Property smbxpath() As String
-            Get
-                Return CType(Me("smbxpath"),String)
-            End Get
-            Set
-                Me("smbxpath") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\SMBX\worlds")>  _
-        Public Property worldlocation() As String
-            Get
-                Return CType(Me("worldlocation"),String)
-            End Get
-            Set
-                Me("worldlocation") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\SMBX\smbx.exe")>  _
-        Public Property executableloc() As String
-            Get
-                Return CType(Me("executableloc"),String)
-            End Get
-            Set
-                Me("executableloc") = value
+                Me("enableDebug") = value
             End Set
         End Property
     End Class

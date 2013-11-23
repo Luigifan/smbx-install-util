@@ -41,7 +41,17 @@ Public Class Main
                 CheckForUpdates()
                 RefreshAllItems()
                 Label6.Text = My.Application.Info.Version.ToString
+                If My.Settings.enableDebug = True Then
+                    Button4.Visible = True
+                Else
+                    Button4.Visible = False
+                End If
             Else
+                If My.Settings.enableDebug = True Then
+                    Button4.Visible = True
+                Else
+                    Button4.Visible = False
+                End If
                 Dim s As Size = Me.Size
                 s.Width = 526
                 Me.Size = s
