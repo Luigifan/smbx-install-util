@@ -1,9 +1,0 @@
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\bin\Debug\Update.exe
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\bin\Debug\Update.pdb
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\bin\Debug\Update.xml
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\obj\x86\Debug\Update.Update.resources
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\obj\x86\Debug\Update.Resources.resources
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\obj\x86\Debug\SMBXUpdater.vbproj.GenerateResource.Cache
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\obj\x86\Debug\Update.exe
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\obj\x86\Debug\Update.xml
-C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXUpdater\obj\x86\Debug\Update.pdb
