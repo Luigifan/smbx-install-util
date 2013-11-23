@@ -33,7 +33,7 @@ Public Class Main
                 Dim s As Size = Me.Size
                 s.Width = 526
                 Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
+                Button4.Text = "->"
                 MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
                 'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
                 'My.Settings.isFirstRun = False
@@ -45,7 +45,7 @@ Public Class Main
                 Dim s As Size = Me.Size
                 s.Width = 526
                 Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
+                Button4.Text = "->"
                 CheckForUpdates()
                 RefreshAllItems()
                 Label6.Text = My.Application.Info.Version.ToString
@@ -63,7 +63,7 @@ Public Class Main
                 Dim s As Size = Me.Size
                 s.Width = 526
                 Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
+                Button4.Text = "->"
                 MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
                 'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
                 'My.Settings.isFirstRun = False
@@ -75,7 +75,7 @@ Public Class Main
                 Dim s As Size = Me.Size
                 s.Width = 526
                 Me.Size = s
-                Button4.Text = "Expand Debug Dialogs->"
+                Button4.Text = "->"
                 CheckForUpdates()
                 RefreshAllItems()
                 Label6.Text = My.Application.Info.Version.ToString
@@ -175,16 +175,16 @@ Public Class Main
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        If Button4.Text = "Expand Debug Dialogs->" Then
+        If Button4.Text = "->" Then
             Dim s As Size = Me.Size
             s.Width = 947
             Me.Size = s
-            Button4.Text = "Hide Debug Dialogs<-"
-        ElseIf Button4.Text = "Hide Debug Dialogs<-" Then
+            Button4.Text = "<-"
+        ElseIf Button4.Text = "<-" Then
             Dim s As Size = Me.Size
             s.Width = 526
             Me.Size = s
-            Button4.Text = "Expand Debug Dialogs->"
+            Button4.Text = "->"
         End If
 
 
