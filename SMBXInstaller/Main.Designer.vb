@@ -159,10 +159,14 @@ Partial Class Main
         Me.TextBox2.Name = "TextBox2"
 <<<<<<< HEAD
         Me.TextBox2.ReadOnly = True
+<<<<<<< HEAD
 =======
         Me.TextBox2.ReadOnly = true
 >>>>>>> 7967d89bf404ca30e0722019a9bf400f85f94eb9
         Me.TextBox2.Size = New System.Drawing.Size(240, 20)
+=======
+        Me.TextBox2.Size = New System.Drawing.Size(378, 20)
+>>>>>>> parent of 20b258d... Moved Episode Icon Frame
         Me.TextBox2.TabIndex = 13
         '
         'ListBox1
@@ -285,7 +289,7 @@ Partial Class Main
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox1.Size = New System.Drawing.Size(240, 48)
+        Me.RichTextBox1.Size = New System.Drawing.Size(378, 48)
         Me.RichTextBox1.TabIndex = 25
         Me.RichTextBox1.Text = ""
         '
@@ -356,10 +360,14 @@ Partial Class Main
         '
         Me.IconImage.BackColor = System.Drawing.Color.Transparent
 <<<<<<< HEAD
+<<<<<<< HEAD
         Me.IconImage.Location = New System.Drawing.Point(383, 357)
 =======
         Me.IconImage.Location = New System.Drawing.Point(383, 352)
 >>>>>>> 7967d89bf404ca30e0722019a9bf400f85f94eb9
+=======
+        Me.IconImage.Location = New System.Drawing.Point(683, 87)
+>>>>>>> parent of 20b258d... Moved Episode Icon Frame
         Me.IconImage.Margin = New System.Windows.Forms.Padding(0)
         Me.IconImage.Name = "IconImage"
         Me.IconImage.Size = New System.Drawing.Size(112, 100)
@@ -371,11 +379,15 @@ Partial Class Main
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
 <<<<<<< HEAD
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+<<<<<<< HEAD
         Me.PictureBox2.Location = New System.Drawing.Point(375, 349)
 =======
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"),System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(375, 344)
 >>>>>>> 7967d89bf404ca30e0722019a9bf400f85f94eb9
+=======
+        Me.PictureBox2.Location = New System.Drawing.Point(675, 79)
+>>>>>>> parent of 20b258d... Moved Episode Icon Frame
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(128, 116)
         Me.PictureBox2.TabIndex = 37

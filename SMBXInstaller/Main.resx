@@ -394,7 +394,7 @@ I didn't even want them there but they're there just in case</value>
   <data name="Mario.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAA2CAYAAACm9ZtyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAB30lEQVRYR92Y
+        vgAADr4B6kKxwAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAB30lEQVRYR92Y
         MVLDMBBFfQyO4DLHSJnSJcdI6ZKSkiNQuqSkpMwRKClTqjNImZeRPlIkMxO8SfFmrN2/+/947BDSzfPc
         RN/3cwutc/QT8SVyS3K0ztFPxDkYGLbbhKf9PvA+TQHqsYnn63EXOD4PAfc2BuhnTWMQxuaeqwdAoIbU
         l6JBqGfNPQhWD6C4w8ufYJ4gnLPmHgRKbnkLzFcD0AA3bU6wjHMrNxtAFyRLf0BXo6a3GwBKC7iVNdBP
@@ -409,7 +409,7 @@ I didn't even want them there but they're there just in case</value>
   <data name="Luigi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAABACAYAAAB7jnWuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACSklEQVRoQ92Y
+        vgAADr4B6kKxwAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACSklEQVRoQ92Y
         MU7DQBBF03MJypQcgZIyJSVlGu6QI+QYlJQ5AiVHiJCQaJBSQmU0Ri+a/Zm115HjNRRP8sz8nf9l7ABZ
         NE1TxHK5bLpQfSlhMyIy9ai+lLDpweDx+zPh6v2tZfH82nJukLDpmSwAC5TDy03LfvMLxsq5QY4X3tRz
         8QDerIS+IOjUKEf9AFx4kyFw6xXm7M9xvPBLhxCZG8zZn+Ok4ZcbHw+rENXB0CAnDb/MiMwN1cFoAQ7b
@@ -425,7 +425,7 @@ I didn't even want them there but they're there just in case</value>
   <data name="Toad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADEAAAA1CAYAAADoDQMKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACqElEQVRoQ+2Z
+        vgAADr4B6kKxwAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACqElEQVRoQ+2Z
         MW7bQBBFVegAuYHblEJOIKRKqdJdfISU7pwjqHSX1mXK3CK+QVKmTOmO5tJ6xOzXDHdJ2YjE0MADzJ3Z
         mfcB2YDpVdM0b8q363fNFHTOEO7ha+IJ1qBzhnAPT0FlPn5479JsNy887jN+3e86SnPszkzgNSgth7MM
         wTIkgKV/bnYdD7tVRy/z1N72OISi7+ie2Z2JnMJFh4jkgaV/99cdYRg+XgL12+0Lfb9xyISmMMsQPzeb
@@ -443,7 +443,7 @@ I didn't even want them there but they're there just in case</value>
   <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAABACAYAAAB7jnWuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACJUlEQVRoQ+2V
+        vgAADr4B6kKxwAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAACJUlEQVRoQ+2V
         vVHDUBCEVYZDSiB0CZTggIAS3AgzLsNlEDokoABKIEOZ4Al9b+6t75BkG0vyEHwzur/dHdkeV03TuHwc
         7pvE6/aupa7rlqjW+6G4zcRiAuie6vThNhOTBzjsqiaBAYaR8W5TFahehNtMXD2ACtQv6xaC6Dyz/iHv
         dXWm28NHyQ+F6DdXC8ACAhgrzKM9DPPHJP0oyPQBeNAgUa39PO8JgI+SH1Q4qrWf5+cGAA7enzYtGFJr
