@@ -194,7 +194,7 @@ Public Class Main
         Dim curver As String = My.Application.Info.Version.ToString
 
         updater.checkinternet()
-        updater.checkversion("https://dl.dropboxusercontent.com/u/62304851/version_smbx.txt", curver)
+        updater.checkversion("http://rohara.x10.mx/smbxpublisher/appfiles/version_smbx.txt", curver)
         If updater.updateavailable = True Then
             Dim oForm As New UpdateConfirm
             oForm.ShowDialog()

@@ -24,8 +24,8 @@ Partial Class Help
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Help))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.OK_Button = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
@@ -50,15 +50,6 @@ Partial Class Help
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'OK_Button
-        '
-        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OK_Button.Location = New System.Drawing.Point(3, 3)
-        Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(67, 23)
-        Me.OK_Button.TabIndex = 0
-        Me.OK_Button.Text = "OK"
-        '
         'Cancel_Button
         '
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -69,19 +60,28 @@ Partial Class Help
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
         '
+        'OK_Button
+        '
+        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OK_Button.Location = New System.Drawing.Point(3, 3)
+        Me.OK_Button.Name = "OK_Button"
+        Me.OK_Button.Size = New System.Drawing.Size(67, 23)
+        Me.OK_Button.TabIndex = 0
+        Me.OK_Button.Text = "OK"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(515, 104)
+        Me.Label1.Size = New System.Drawing.Size(529, 130)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = resources.GetString("Label1.Text")
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(15, 123)
+        Me.LinkLabel1.Location = New System.Drawing.Point(448, 247)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(49, 13)
         Me.LinkLabel1.TabIndex = 2
@@ -91,7 +91,7 @@ Partial Class Help
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(70, 123)
+        Me.LinkLabel2.Location = New System.Drawing.Point(503, 247)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(95, 13)
         Me.LinkLabel2.TabIndex = 3

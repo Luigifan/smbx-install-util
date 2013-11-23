@@ -136,7 +136,7 @@ Partial Class Main
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 357)
+        Me.Label3.Location = New System.Drawing.Point(68, 358)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 12)
         Me.Label3.TabIndex = 9
@@ -147,7 +147,7 @@ Partial Class Main
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(57, 413)
+        Me.Label4.Location = New System.Drawing.Point(87, 412)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(36, 12)
         Me.Label4.TabIndex = 10
@@ -201,7 +201,7 @@ Partial Class Main
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(605, 209)
+        Me.Label5.Location = New System.Drawing.Point(603, 135)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(305, 78)
         Me.Label5.TabIndex = 19
