@@ -1,0 +1,10 @@
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\bin\Debug\SMBXSubmission.exe
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\bin\Debug\SMBXSubmission.pdb
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\bin\Debug\SMBXSubmission.xml
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.Resources.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.vbproj.GenerateResource.Cache
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.exe
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.xml
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.pdb
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.XMLMain.resources
+C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXSubmission\obj\x86\Debug\SMBXSubmission.Help.resources

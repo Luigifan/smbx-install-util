@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StoryEpisodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Episodes>
+    <Episode>
+      <EpisodeName>The Invasion 2</EpisodeName>
+      <WorldName>The Invasion 2</WorldName>
+      <Description>The sequel to the original</Description>
+      <ZipSize>NO LONGER NEEDED ITS IN HERE FOR NO REASON</ZipSize>
+      <Author>Redigit</Author>
+      <DownloadLink>NULL EDIT LATER K</DownloadLink>
+      <ZipName>theinvasion2.zip</ZipName>
+    </Episode>
+  </Episodes>
+</StoryEpisodes>

@@ -1,0 +1,42 @@
+﻿Merge branch 'master' of https://github.com/Luigifan/smbx-install-util
+
+Conflicts:
+	SMBXInstaller.v12.suo
+	SMBXInstaller/Main.Designer.vb
+	SMBXInstaller/bin/Release/SMBXInstaller.exe
+	SMBXInstaller/bin/Release/SMBXInstaller.pdb
+	SMBXInstaller/obj/x86/Release/DesignTimeResolveAssemblyReferencesInput.cache
+	SMBXInstaller/obj/x86/Release/SMBXInstaller.exe
+	SMBXInstaller/obj/x86/Release/SMBXInstaller.pdb
+	SMBXInstaller/obj/x86/Release/SMBXInstaller.vbproj.GenerateResource.Cache
+	SMBXInstaller/obj/x86/Release/SMBXInstaller.vbprojResolveAssemblyReference.cache
+	SMBXSubmission/obj/x86/Release/DesignTimeResolveAssemblyReferencesInput.cache
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   SMBXInstaller/Main.Designer.vb
+#	modified:   SMBXInstaller/Main.vb
+#	deleted:    SMBXInstaller/bin/Release/SMBXInstaller.vshost.exe.manifest
+#	modified:   SMBXInstaller/obj/x86/Release/SMBXInstaller.vbproj.FileListAbsolute.txt
+#	modified:   SMBXSubmission/bin/Release/SMBXSubmission.exe
+#	modified:   SMBXSubmission/bin/Release/SMBXSubmission.pdb
+#	modified:   SMBXUpdater/obj/x86/Release/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   UpgradeLog3.htm
+#
+

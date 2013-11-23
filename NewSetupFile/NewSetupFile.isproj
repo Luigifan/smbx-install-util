@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\SMBXInstaller\SMBXInstaller.vbproj">
+			<Name>SMBXInstaller</Name>
+			<Project>{6C0E0164-52BA-4432-B2BF-BF982F88569E}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\SMBXSubmission\SMBXSubmission.vbproj">
+			<Name>SMBXSubmission</Name>
+			<Project>{D831B97A-2D80-4199-AF72-0BA9886EFEA9}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\SMBXUpdater\SMBXUpdater.vbproj">
+			<Name>SMBXUpdater</Name>
+			<Project>{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>
