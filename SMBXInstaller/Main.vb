@@ -14,7 +14,7 @@ Public Class Main
     Dim AppDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
     Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
     'Dim settingsIni As New Setting.IniFile(AppDataFolder + "\SMBXInstaller\programsettings.ini")
-
+    'settingsIni.ReadValue("Settings")
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -57,6 +57,7 @@ Public Class Main
             sw.WriteLine("smbxpath=C:\SMBX")
             sw.WriteLine("worldlocation=C:\SMBX\worlds")
             sw.WriteLine("executableloc=C:\SMBX\smbx.exe")
+            sw.WriteLine("debug=False")
             sw.Close()
             If firstRun = "True" Then
                 Dim s As Size = Me.Size
@@ -97,7 +98,7 @@ Public Class Main
 
     Public Sub RefreshAllItems()
         ReloadWorldsDir()
-        xml = XDocument.Load("https://dl.dropboxusercontent.com/u/62304851/worldIndex.xml")
+        xml = XDocument.Load("http://rohara.x10.mx/smbxpublisher/appfiles/worldIndex.xml")
         Dim games() As String = xml...<episode>.Select(Function(n) n.Value).ToArray
         ListBox1.DataSource = games
         repoUpdated.Text = "Repo Updated"
@@ -111,12 +112,11 @@ Public Class Main
         TextBox3.Text = node.@DownloadLink
         TextBox4.Text = node.@TechName
         If node.@IconLoc = "null" Then
-            'IconImage.ImageLocation = "http://i.imgur.com/kY961n3.gif"
-            IconImage.Visible = False
+            IconImage.ImageLocation = "http://rohara.x10.mx/smbxpublisher/appfiles/NOICON.gif"
         Else
             IconImage.ImageLocation = node.@IconLoc
-            IconImage.Visible = True
         End If
+        IconImage.Visible = True
         Dim ZipName As String = node.@ZipName
         Dim req As System.Net.WebRequest = System.Net.HttpWebRequest.Create(node.@DownloadLink)
         req.Method = "HEAD"
@@ -219,5 +219,9 @@ Public Class Main
 
     Private Sub RefreshWorlds_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshWorlds.Click
         ReloadWorldsDir()
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
     End Sub
 End Class

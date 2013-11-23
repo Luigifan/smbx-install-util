@@ -53,14 +53,14 @@ Partial Class Main
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.IconImage = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.StatusStrip1.SuspendLayout()
-        CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Toad, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IconImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout
+        CType(Me.Mario,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.Luigi,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.Toad,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.IconImage,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'Button1
         '
@@ -69,11 +69,11 @@ Partial Class Main
         Me.Button1.Size = New System.Drawing.Size(61, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Settings"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'ListBox2
         '
-        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.FormattingEnabled = true
         Me.ListBox2.Location = New System.Drawing.Point(242, 62)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.Size = New System.Drawing.Size(266, 199)
@@ -81,9 +81,9 @@ Partial Class Main
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label1.Location = New System.Drawing.Point(9, 46)
         Me.Label1.Name = "Label1"
@@ -93,9 +93,9 @@ Partial Class Main
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label2.Location = New System.Drawing.Point(275, 46)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 12)
@@ -104,38 +104,38 @@ Partial Class Main
         '
         'Button2
         '
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"),System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Enabled = False
+        Me.Button2.Enabled = false
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Button2.Location = New System.Drawing.Point(242, 262)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(90, 90)
         Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Delete Selected" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "World" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Text = "Delete Selected"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"World"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'Button3
         '
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"),System.Drawing.Image)
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Enabled = False
+        Me.Button3.Enabled = false
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button3.Location = New System.Drawing.Point(12, 262)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 90)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "Install Selected World"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = true
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label3.Location = New System.Drawing.Point(12, 357)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 12)
@@ -144,9 +144,9 @@ Partial Class Main
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
+        Me.Label4.AutoSize = true
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label4.Location = New System.Drawing.Point(57, 413)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(36, 12)
@@ -157,13 +157,13 @@ Partial Class Main
         '
         Me.TextBox2.Location = New System.Drawing.Point(129, 408)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(378, 20)
+        Me.TextBox2.ReadOnly = true
+        Me.TextBox2.Size = New System.Drawing.Size(240, 20)
         Me.TextBox2.TabIndex = 13
         '
         'ListBox1
         '
-        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.FormattingEnabled = true
         Me.ListBox1.Location = New System.Drawing.Point(12, 62)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(214, 199)
@@ -173,7 +173,7 @@ Partial Class Main
         '
         Me.TextBox3.Location = New System.Drawing.Point(694, 380)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.ReadOnly = true
         Me.TextBox3.Size = New System.Drawing.Size(214, 20)
         Me.TextBox3.TabIndex = 16
         Me.TextBox3.Text = "IF YOU SEE THIS YOU ARE DEBUGGING"
@@ -182,19 +182,21 @@ Partial Class Main
         '
         Me.TextBox4.Location = New System.Drawing.Point(694, 406)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.ReadOnly = true
         Me.TextBox4.Size = New System.Drawing.Size(214, 20)
         Me.TextBox4.TabIndex = 17
         Me.TextBox4.Text = "IF YOU SEE THIS YOU ARE DEBUGGING"
         '
         'Button4
         '
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button4.Location = New System.Drawing.Point(362, 12)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(146, 23)
         Me.Button4.TabIndex = 18
         Me.Button4.Text = "Expand Debug Dialogs->"
         Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
         '
         'Label5
         '
@@ -266,7 +268,7 @@ Partial Class Main
         '
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel2.Location = New System.Drawing.Point(680, 46)
+        Me.LinkLabel2.Location = New System.Drawing.Point(244, 447)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(125, 13)
         Me.LinkLabel2.TabIndex = 24
@@ -279,7 +281,7 @@ Partial Class Main
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox1.Size = New System.Drawing.Size(378, 48)
+        Me.RichTextBox1.Size = New System.Drawing.Size(240, 48)
         Me.RichTextBox1.TabIndex = 25
         Me.RichTextBox1.Text = ""
         '
@@ -310,7 +312,7 @@ Partial Class Main
         Me.Mario.BackColor = System.Drawing.Color.Transparent
         Me.Mario.BackgroundImage = CType(resources.GetObject("Mario.BackgroundImage"), System.Drawing.Image)
         Me.Mario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Mario.Location = New System.Drawing.Point(463, 267)
+        Me.Mario.Location = New System.Drawing.Point(463, 274)
         Me.Mario.Name = "Mario"
         Me.Mario.Size = New System.Drawing.Size(32, 64)
         Me.Mario.TabIndex = 29
@@ -330,47 +332,47 @@ Partial Class Main
         '
         Me.Toad.BackColor = System.Drawing.Color.Transparent
         Me.Toad.BackgroundImage = CType(resources.GetObject("Toad.BackgroundImage"), System.Drawing.Image)
-        Me.Toad.Location = New System.Drawing.Point(220, 3)
+        Me.Toad.Location = New System.Drawing.Point(153, 5)
         Me.Toad.Name = "Toad"
         Me.Toad.Size = New System.Drawing.Size(49, 53)
         Me.Toad.TabIndex = 31
-        Me.Toad.TabStop = False
+        Me.Toad.TabStop = false
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"),System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(389, 262)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 64)
         Me.PictureBox1.TabIndex = 32
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.TabStop = false
         '
         'IconImage
         '
         Me.IconImage.BackColor = System.Drawing.Color.Transparent
-        Me.IconImage.Location = New System.Drawing.Point(683, 87)
+        Me.IconImage.Location = New System.Drawing.Point(383, 352)
         Me.IconImage.Margin = New System.Windows.Forms.Padding(0)
         Me.IconImage.Name = "IconImage"
         Me.IconImage.Size = New System.Drawing.Size(112, 100)
         Me.IconImage.TabIndex = 38
-        Me.IconImage.TabStop = False
+        Me.IconImage.TabStop = false
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(675, 79)
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"),System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(375, 344)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(128, 116)
         Me.PictureBox2.TabIndex = 37
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.TabStop = false
         '
         'Main
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"),System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
         Me.Controls.Add(Me.IconImage)
         Me.Controls.Add(Me.PictureBox2)
@@ -399,24 +401,24 @@ Partial Class Main
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.Button1)
-        Me.DoubleBuffered = True
+        Me.DoubleBuffered = true
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
+        Me.MaximizeBox = false
         Me.Name = "Main"
         Me.Text = "SMBX World Manager"
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
-        CType(Me.Mario, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Luigi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Toad, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IconImage, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(false)
+        Me.StatusStrip1.PerformLayout
+        CType(Me.Mario,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.Luigi,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.Toad,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.IconImage,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ListBox2 As System.Windows.Forms.ListBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
