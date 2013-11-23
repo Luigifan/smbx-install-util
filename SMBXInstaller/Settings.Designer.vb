@@ -31,6 +31,7 @@ Partial Class Settings
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,7 +46,7 @@ Partial Class Settings
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 40)
+        Me.Label2.Location = New System.Drawing.Point(10, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 1
@@ -83,7 +84,7 @@ Partial Class Settings
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(315, 93)
+        Me.Button1.Location = New System.Drawing.Point(315, 96)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 6
@@ -92,7 +93,7 @@ Partial Class Settings
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(396, 93)
+        Me.Button2.Location = New System.Drawing.Point(396, 96)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(127, 23)
         Me.Button2.TabIndex = 7
@@ -101,18 +102,30 @@ Partial Class Settings
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(3, 93)
+        Me.Button3.Location = New System.Drawing.Point(3, 96)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 23)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "Reset First Run"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(13, 96)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(134, 17)
+        Me.CheckBox1.TabIndex = 9
+        Me.CheckBox1.Text = "Allow Extra Debug Info"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.Visible = False
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(535, 125)
+        Me.ClientSize = New System.Drawing.Size(535, 128)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -139,4 +152,5 @@ Partial Class Settings
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

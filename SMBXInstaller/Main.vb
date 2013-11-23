@@ -13,8 +13,7 @@ Public Class Main
     Dim xml As New XDocument
     Dim AppDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
     Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
-    'Dim settingsIni As New Setting.IniFile(AppDataFolder + "\SMBXInstaller\programsettings.ini")
-    'settingsIni.ReadValue("Settings")
+    
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -23,31 +22,18 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
+        IsDestinationReachable("http://rohara.x10.mx/smbxpublisher/appfiles/")
+        
         Dim firstRun As String
         firstRun = settingsIni.ReadValue("Settings", "isFirstRun")
+        
 
         If My.Computer.FileSystem.FileExists(Environment.CurrentDirectory + "\programsettings.ini") Then
             If firstRun = "True" Then
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "->"
                 MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-                'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
-                'My.Settings.isFirstRun = False
                 settingsIni.WriteValue("Settings", "isFirstRun", "False")
-                CheckForUpdates()
-                RefreshAllItems()
                 Label6.Text = My.Application.Info.Version.ToString
             Else
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "->"
-                CheckForUpdates()
-                RefreshAllItems()
                 Label6.Text = My.Application.Info.Version.ToString
             End If
         Else
@@ -57,32 +43,24 @@ Public Class Main
             sw.WriteLine("smbxpath=C:\SMBX")
             sw.WriteLine("worldlocation=C:\SMBX\worlds")
             sw.WriteLine("executableloc=C:\SMBX\smbx.exe")
-            sw.WriteLine("debug=False")
+            'sw.WriteLine("debugEnabled=False")
             sw.Close()
             If firstRun = "True" Then
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "->"
                 MsgBox("Hi! I see this is your first run!" & vbNewLine & "Please go to Settings and configure your SMBX directories")
-                'My.Computer.FileSystem.CreateDirectory("C:\Temp\SMBX")
-                'My.Settings.isFirstRun = False
                 settingsIni.WriteValue("Settings", "isFirstRun", "False")
-                CheckForUpdates()
-                RefreshAllItems()
                 Label6.Text = My.Application.Info.Version.ToString
             Else
-                Dim s As Size = Me.Size
-                s.Width = 526
-                Me.Size = s
-                Button4.Text = "->"
-                CheckForUpdates()
-                RefreshAllItems()
-                Label6.Text = My.Application.Info.Version.ToString
+                'Continue Normally
             End If
         End If
 
-
+        Dim s As Size = Me.Size
+        s.Width = 526
+        Me.Size = s
+        Button4.Text = "->"
+        Label6.Text = My.Application.Info.Version.ToString
+        CheckForUpdates()
+        RefreshAllItems()
 
     End Sub
 
@@ -196,6 +174,7 @@ Public Class Main
         updater.checkinternet()
         updater.checkversion("http://rohara.x10.mx/smbxpublisher/appfiles/version_smbx.txt", curver)
         If updater.updateavailable = True Then
+            My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/Update_Latest.exe", Environment.CurrentDirectory + "\Update.exe", "", "", False, "1000", True)
             Dim oForm As New UpdateConfirm
             oForm.ShowDialog()
         Else
@@ -204,7 +183,12 @@ Public Class Main
 
     End Sub
 
+    Public Sub CheckDebugVisible()
+
+    End Sub
+
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/Update_Latest.exe", Environment.CurrentDirectory + "\Update.exe", "", "", False, "1000", True)
         Process.Start("Update.exe")
         Me.Close()
     End Sub
@@ -221,7 +205,27 @@ Public Class Main
         ReloadWorldsDir()
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
-    End Sub
+
+
+    ''' <summary>
+    ''' Returns true if the destination is reachable via ping
+    ''' </summary>
+    Public Function IsDestinationReachable(ByVal hostnameOrAddress As String)
+        Dim reachable As Boolean = False
+        Try
+            reachable = My.Computer.Network.IsAvailable AndAlso _
+                             My.Computer.Network.Ping("http://rohara.x10.mx/smbxpublisher/appfiles/")
+
+        Catch pingException As System.Net.NetworkInformation.PingException
+        Catch genericNetworkException As System.Net.NetworkInformation.NetworkInformationException
+
+            MsgBox("Server is offline! Unable to continue", MsgBoxStyle.Critical)
+            Me.Close()
+
+        End Try
+        Return reachable
+    End Function
+
+
 End Class

@@ -6,6 +6,7 @@ Public Class Settings
         TextBox1.Text = settingsIni.ReadValue("Settings", "smbxpath")
         TextBox2.Text = settingsIni.ReadValue("Settings", "worldlocation")
         TextBox3.Text = settingsIni.ReadValue("Settings", "executableloc")
+        'CheckBox1.Checked = settingsIni.ReadValue("Settings", "debugEnabled")
 
     End Sub
 
@@ -15,7 +16,11 @@ Public Class Settings
 
         Main.RefreshAllItems()
         Main.ReloadWorldsDir()
-
+        If CheckBox1.Checked = True Then
+            Main.Button4.Visible = True
+        Else
+            Main.Button4.Visible = False
+        End If
 
 
 
@@ -32,15 +37,19 @@ Public Class Settings
     End Sub
 
     Public Sub SaveSettings()
-        MsgBox("Changing SMBX Path from " + My.Settings.smbxpath + " to " + TextBox1.Text)
-        MsgBox("Changing World Location from " + My.Settings.worldlocation + " to " + TextBox2.Text)
-        MsgBox("Changing SMBX Path from " + My.Settings.executableloc + " to " + TextBox3.Text)
+        MsgBox("Settings saved!")
 
         settingsIni.WriteValue("Settings", "smbxpath", TextBox1.Text)
         settingsIni.WriteValue("Settings", "worldlocation", TextBox2.Text)
         settingsIni.WriteValue("Settings", "executableloc", TextBox3.Text)
+        'settingsIni.WriteValue("Settings", "debugEnabled", CheckBox1.Checked)
+
 
         Main.ReloadWorldsDir()
         Me.Close()
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
     End Sub
 End Class

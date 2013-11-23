@@ -230,7 +230,6 @@ Partial Class XMLMain
         Me.MinimumSize = New System.Drawing.Size(489, 216)
         Me.Name = "XMLMain"
         Me.ShowIcon = False
-        Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SMBX Episode Sub Generator"
