@@ -53,6 +53,8 @@ Partial Class Main
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.IconImage = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -367,12 +369,32 @@ Partial Class Main
         Me.PictureBox2.TabIndex = 37
         Me.PictureBox2.TabStop = False
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(790, 296)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(118, 23)
+        Me.Button5.TabIndex = 39
+        Me.Button5.Text = "Install SMBX (W.I.P.)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(790, 325)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(118, 23)
+        Me.Button6.TabIndex = 40
+        Me.Button6.Text = "Launch SMBX"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.IconImage)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -448,5 +470,7 @@ Partial Class Main
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents IconImage As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 
 End Class

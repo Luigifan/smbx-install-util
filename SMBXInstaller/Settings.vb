@@ -16,11 +16,11 @@ Public Class Settings
 
         Main.RefreshAllItems()
         Main.ReloadWorldsDir()
-        If CheckBox1.Checked = True Then
-            Main.Button4.Visible = True
-        Else
-            Main.Button4.Visible = False
-        End If
+        'If CheckBox1.Checked = True Then
+        'Main.Button4.Visible = True
+        'Else
+        'Main.Button4.Visible = False
+        'End If
 
 
 

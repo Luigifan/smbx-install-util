@@ -228,4 +228,29 @@ Public Class Main
     End Function
 
 
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+
+        My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/SMBX.zip", "C:\SMBX.zip", "", "", True, 1000, True)
+        Using zip1 As ZipFile = ZipFile.Read("C:\SMBX.zip")
+            Dim entry As ZipEntry
+            'DEBUG MESSAGES
+            MsgBox("Extracting to " + "C:\SMBX")
+            For Each entry In zip1
+
+                entry.Extract("C:\SMBX", ExtractExistingFileAction.OverwriteSilently)
+            Next
+            ReloadWorldsDir()
+            MsgBox("Extraction complete. Please go and reconfigure if necessary.", MsgBoxStyle.Information)
+        End Using
+
+    End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Dim SMBXExe As String = settingsIni.ReadValue("Settings", "executableloc")
+        If My.Computer.FileSystem.FileExists(SMBXExe) Then
+            Process.Start(SMBXExe)
+        Else
+            MsgBox("Can't find " + SMBXExe + " verify it exists or change some settings!", MsgBoxStyle.Critical)
+        End If
+    End Sub
 End Class
