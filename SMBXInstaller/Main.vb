@@ -253,4 +253,5 @@ Public Class Main
             MsgBox("Can't find " + SMBXExe + " verify it exists or change some settings!", MsgBoxStyle.Critical)
         End If
     End Sub
+
 End Class
