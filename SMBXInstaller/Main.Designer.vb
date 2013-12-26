@@ -56,7 +56,10 @@ Partial Class Main
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
+<<<<<<< HEAD
         Me.Button8 = New System.Windows.Forms.Button()
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
         Me.StatusStrip1.SuspendLayout()
         CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -398,6 +401,7 @@ Partial Class Main
         Me.Button7.Text = "Find smbx.exe"
         Me.Button7.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
         'Button8
         '
         Me.Button8.Location = New System.Drawing.Point(790, 237)
@@ -407,13 +411,18 @@ Partial Class Main
         Me.Button8.Text = "Submit a Project"
         Me.Button8.UseVisualStyleBackColor = True
         '
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
+<<<<<<< HEAD
         Me.Controls.Add(Me.Button8)
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -496,6 +505,9 @@ Partial Class Main
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
+<<<<<<< HEAD
     Friend WithEvents Button8 As System.Windows.Forms.Button
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
 
 End Class

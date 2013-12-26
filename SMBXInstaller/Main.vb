@@ -254,8 +254,11 @@ Public Class Main
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         Dim oForm As New XMLMain
         oForm.ShowDialog()
     End Sub
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
 End Class
