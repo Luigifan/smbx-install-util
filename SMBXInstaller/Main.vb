@@ -253,4 +253,9 @@ Public Class Main
             MsgBox("Can't find " + SMBXExe + " verify it exists or change some settings!", MsgBoxStyle.Critical)
         End If
     End Sub
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        Dim oForm As New XMLMain
+        oForm.ShowDialog()
+    End Sub
 End Class

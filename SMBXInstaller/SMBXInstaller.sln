@@ -14,7 +14,7 @@ Global
 		{6C0E0164-52BA-4432-B2BF-BF982F88569E}.Release|x86.ActiveCfg = Release|x86
 		{6C0E0164-52BA-4432-B2BF-BF982F88569E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SMBXInstaller.vbproj
 	EndGlobalSection
 EndGlobal

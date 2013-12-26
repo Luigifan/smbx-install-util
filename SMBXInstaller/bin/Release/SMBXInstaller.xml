@@ -6,11 +6,7 @@ SMBXInstaller
 </name>
 </assembly>
 <members>
-<member name="M:SMBXInstaller.Main.IsDestinationReachable(System.String)">
-	<summary>
- Returns true if the destination is reachable via ping
- </summary>
-</member><member name="P:SMBXInstaller.My.Resources.Resources.ResourceManager">
+<member name="P:SMBXInstaller.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -23,6 +19,10 @@ SMBXInstaller
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="M:SMBXInstaller.Main.IsDestinationReachable(System.String)">
+	<summary>
+ Returns true if the destination is reachable via ping
+ </summary>
 </member>
 </members>
 </doc>
