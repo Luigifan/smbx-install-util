@@ -23,6 +23,7 @@ Partial Class LeSplash
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LeSplash))
+<<<<<<< HEAD
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,11 +42,23 @@ Partial Class LeSplash
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(95, 319)
+=======
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.SuspendLayout()
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(98, 319)
+>>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(308, 23)
         Me.ProgressBar1.Step = 1
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+<<<<<<< HEAD
         Me.ProgressBar1.TabIndex = 2
+=======
+        Me.ProgressBar1.TabIndex = 0
+>>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
         '
         'LeSplash
         '
@@ -55,18 +68,27 @@ Partial Class LeSplash
         Me.ClientSize = New System.Drawing.Size(498, 348)
         Me.ControlBox = False
         Me.Controls.Add(Me.ProgressBar1)
+<<<<<<< HEAD
         Me.Controls.Add(Me.PictureBox1)
+=======
+>>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "LeSplash"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+<<<<<<< HEAD
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+=======
+        Me.ResumeLayout(False)
+
+    End Sub
+>>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
 
 End Class

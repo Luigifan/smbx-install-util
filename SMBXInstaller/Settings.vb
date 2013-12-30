@@ -54,6 +54,7 @@ Public Class Settings
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+<<<<<<< HEAD
         
         Dim smbxexedir = ""
         Dim fileDialogBox As New OpenFileDialog()
@@ -69,6 +70,26 @@ Public Class Settings
         TextBox2.Text = smbxexedir + "\worlds"
         TextBox3.Text = smbxexedir + "\smbx.exe"
 
+=======
+        Dim smbxexe = ""
+        Dim smbxexeworld = ""
+        Dim smbxexedir = ""
+        Dim fileDialogBox As New OpenFileDialog()
+        fileDialogBox.Filter = "Executable Files (*.exe)|*.exe"
+        fileDialogBox.FilterIndex = 1
+        fileDialogBox.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer)
+        If (fileDialogBox.ShowDialog() = DialogResult.OK) Then
+            smbxexe = fileDialogBox.FileName
+            smbxexeworld = fileDialogBox.FileName
+            smbxexedir = fileDialogBox.FileName
+        End If
+
+        Dim smbxdirw As String = Replace(smbxexeworld, "smbx.exe", "worlds")
+        Dim smbxdir As String = Replace(smbxexedir, "smbx.exe", "")
+        TextBox3.Text = smbxexe
+        TextBox2.Text = smbxdirw
+        TextBox3.Text = smbxdir
+>>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
 
 
     End Sub

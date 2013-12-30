@@ -35,6 +35,7 @@ Namespace My
             Me.MainForm = Global.SMBXInstaller.Main
         End Sub
         
+<<<<<<< HEAD
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateSplashScreen()
             Randomize()
@@ -62,6 +63,11 @@ Namespace My
             Me.SplashScreen = Global.SMBXInstaller.LeSplash
 
 
+=======
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        Protected Overrides Sub OnCreateSplashScreen()
+            Me.SplashScreen = Global.SMBXInstaller.LeSplash
+>>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
         End Sub
     End Class
 End Namespace
