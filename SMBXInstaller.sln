@@ -1,18 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SMBXInstaller", "SMBXInstaller\SMBXInstaller.vbproj", "{6C0E0164-52BA-4432-B2BF-BF982F88569E}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SMBXSubmission", "SMBXSubmission\SMBXSubmission.vbproj", "{D831B97A-2D80-4199-AF72-0BA9886EFEA9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer Package", "TheSetup\TheSetup.vdproj", "{2F8A817B-4D8E-47E0-A6AC-60CA702911C0}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SMBXUpdater", "SMBXUpdater\SMBXUpdater.vbproj", "{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6C0E0164-52BA-4432-B2BF-BF982F88569E} = {6C0E0164-52BA-4432-B2BF-BF982F88569E}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +16,16 @@ Global
 		SingleImage|x86 = SingleImage|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.CD_ROM|x86.ActiveCfg = Release|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.CD_ROM|x86.Build.0 = Release|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Debug|x86.ActiveCfg = Debug|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Debug|x86.Build.0 = Debug|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.DVD-5|x86.ActiveCfg = Debug|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.DVD-5|x86.Build.0 = Debug|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Release|x86.ActiveCfg = Release|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Release|x86.Build.0 = Release|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.SingleImage|x86.ActiveCfg = Release|x86
+		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.SingleImage|x86.Build.0 = Release|x86
 		{6C0E0164-52BA-4432-B2BF-BF982F88569E}.CD_ROM|x86.ActiveCfg = Release|x86
 		{6C0E0164-52BA-4432-B2BF-BF982F88569E}.CD_ROM|x86.Build.0 = Release|x86
 		{6C0E0164-52BA-4432-B2BF-BF982F88569E}.Debug|x86.ActiveCfg = Debug|x86
@@ -43,21 +46,9 @@ Global
 		{D831B97A-2D80-4199-AF72-0BA9886EFEA9}.Release|x86.Build.0 = Release|x86
 		{D831B97A-2D80-4199-AF72-0BA9886EFEA9}.SingleImage|x86.ActiveCfg = Release|x86
 		{D831B97A-2D80-4199-AF72-0BA9886EFEA9}.SingleImage|x86.Build.0 = Release|x86
-		{2F8A817B-4D8E-47E0-A6AC-60CA702911C0}.CD_ROM|x86.ActiveCfg = Release
-		{2F8A817B-4D8E-47E0-A6AC-60CA702911C0}.Debug|x86.ActiveCfg = Debug
-		{2F8A817B-4D8E-47E0-A6AC-60CA702911C0}.DVD-5|x86.ActiveCfg = Debug
-		{2F8A817B-4D8E-47E0-A6AC-60CA702911C0}.Release|x86.ActiveCfg = Release
-		{2F8A817B-4D8E-47E0-A6AC-60CA702911C0}.SingleImage|x86.ActiveCfg = Release
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.CD_ROM|x86.ActiveCfg = Release|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.CD_ROM|x86.Build.0 = Release|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Debug|x86.ActiveCfg = Debug|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Debug|x86.Build.0 = Debug|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.DVD-5|x86.ActiveCfg = Debug|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.DVD-5|x86.Build.0 = Debug|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Release|x86.ActiveCfg = Release|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.Release|x86.Build.0 = Release|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.SingleImage|x86.ActiveCfg = Release|x86
-		{0A5CF47A-D0EF-46ED-852E-6FC4981E74BF}.SingleImage|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SMBXInstaller\SMBXInstaller.vbproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

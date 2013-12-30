@@ -14,22 +14,24 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Mike\Desktop\SMBXInstaller Publish\</PublishUrl>
+    <PublishUrl>ftp://ftp.mrmiketheripper.x10.mx/smbxinstaller_files/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Super Mario Bros X World Manager</ProductName>
     <PublisherName>Mike Santiago, Inc</PublisherName>
+    <MinimumRequiredVersion>1.4.0.0</MinimumRequiredVersion>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.4.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -38,12 +40,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>SMBXInstaller.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <AdditionalParameters>
+    </AdditionalParameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -54,15 +57,8 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>SMBXInstaller.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
+    <AdditionalParameters>
+    </AdditionalParameters>
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
@@ -90,10 +86,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ionic.Zip">
-      <HintPath>.\Ionic.Zip.dll</HintPath>
+      <HintPath>Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Setting">
-      <HintPath>.\Setting.dll</HintPath>
+      <HintPath>Setting.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -105,7 +101,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="UpdateVB">
-      <HintPath>.\UpdateVB.dll</HintPath>
+      <HintPath>UpdateVB.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +117,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="LeSplash.Designer.vb">
+      <DependentUpon>LeSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LeSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +152,18 @@
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Submission Application\Help.Designer.vb">
+      <DependentUpon>Help.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Submission Application\Help.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submission Application\XMLMain.Designer.vb">
+      <DependentUpon>XMLMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Submission Application\XMLMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="test.Designer.vb">
       <DependentUpon>test.vb</DependentUpon>
     </Compile>
@@ -163,17 +178,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LeSplash.resx">
+      <DependentUpon>LeSplash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submission Application\Help.resx">
+      <DependentUpon>Help.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submission Application\XMLMain.resx">
+      <DependentUpon>XMLMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.vb</DependentUpon>
@@ -184,7 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="My Project\app.manifest" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -219,7 +245,36 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Toad fly1.png" />
+    <None Include="Toad fly.png" />
+    <None Include="AnotherBlock.gif" />
+    <Content Include="background 1.png" />
+    <Content Include="background 2.png" />
+    <Content Include="background 3.png" />
+    <Content Include="background 4.png" />
+    <None Include="FirePeachHold.png" />
+    <None Include="Frame.gif" />
+    <None Include="Hammer mario jump.png" />
+    <None Include="FirePeachHold1.png" />
+    <None Include="Background_Main_Full.png" />
+    <None Include="Background_Main_Full1.png" />
     <Content Include="Icon_ico.ico" />
+    <None Include="Resources\background 1.png" />
+    <None Include="Resources\background 2.png" />
+    <None Include="Resources\background 3.png" />
+    <None Include="Resources\background 4.png" />
+    <None Include="Resources\background 5.png" />
+    <None Include="LuigiSkid.png" />
+    <None Include="Mario jump.png" />
+    <None Include="Peach hold.png" />
+    <None Include="SomeBlock.gif" />
+    <None Include="LuigiSkid1.png" />
+    <None Include="Resources\Background_Main_Full.png" />
+    <None Include="Resources\Background_Main_Full1.png" />
+    <None Include="StatusStrip_Full.gif" />
+    <None Include="Resources\StatusStrip_Snow.gif" />
+    <None Include="Resources\exclamation mark.png" />
+    <Content Include="Submission Application\help-browser.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

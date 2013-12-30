@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>159, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA3UAAAN1AHvkboVAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
+        aW5rc2NhcGUub3Jnm+48GgAAAnRJREFUOE+N0d1PklEcB/Dntpvu+keaL3XXTUvLG1ag+GisC6Sx5o0X
+        CS1bNTerrTZNSjFN5XkKYkayQmtMWTLHhUG8qCAoIsibs1oXKG/fzjkukq3Si8/OxTm/7/md3+F4nq8i
+        a7my1yyXFshaJCsj55tLrW0tJcW19mWpVHrq8HlOq9WOaTSand9IIXK5HPb395HP51EoFJhisYiJyQnw
+        bS2bpPBkJaC7u/u7y+XC4uIiFhYWIG2+jFAoBJ/Px3i9XrjdbiwtLaFcLmNgoL/MX231k05OsICurq5v
+        TqcTFosFZrOZBYTDYYy8GKkSCPhZQKlUgu6Zrsy3y4dZQGdn567DMc+KTSYT6BNisRg2Njawvr7ORCIR
+        RKNRpNNpJBIJeDwetCv4HyxArVbv2O12GI1GCILAAra3tzH2cpTcrK+gIVtbW4znqwekg58sQKlUZm02
+        G0RRxPj4OMjUkc1mkclkGHorlUqlmGQyiWAwSIYpP+hAoVCkrVYrzt0QcOb6gXqiruNALWOoqFH+Ua8S
+        4/Qr0lNTU+zgfCDzVw5qudonb4qECGVOJpMl6ftp+mey0f9+7UiDM2HMepKo6TCUOIlEkhAEA2nXAOdK
+        Fs9nI0catIUx8yVJuy5wTU1NcTq8epWAOW8a+o8RDP+DjhQ+mQ7hkWUV71xxGpDnGhoaYnq9ng1PcGzi
+        8XQQD9+uote8gvumZdw1BtDzyg/NpA83J7zMLcGHwQ9rqFWJe1xjY2N0aGgIZ0nAU/K+e6YAbov+/7rz
+        2o/eNwH6SznaQbSnT8cCpH1zkD2YP5ZLPTbUqcQgd/6iZPTw3x5XrdKwe1opXPgFiU26Vh1T7GoAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
 </root>

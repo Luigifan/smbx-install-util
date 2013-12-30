@@ -1,0 +1,6 @@
+C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Main.resources
+C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Resources.resources
+C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Settings.resources
+C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.test.resources
+C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.UpdateConfirm.resources
+C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.exe

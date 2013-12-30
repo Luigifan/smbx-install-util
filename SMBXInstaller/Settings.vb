@@ -52,4 +52,24 @@ Public Class Settings
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
 
     End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        
+        Dim smbxexedir = ""
+        Dim fileDialogBox As New OpenFileDialog()
+        FolderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer
+        
+
+        If (FolderBrowserDialog1.ShowDialog = DialogResult.OK) Then
+
+            smbxexedir = FolderBrowserDialog1.SelectedPath
+        End If
+
+        TextBox1.Text = smbxexedir
+        TextBox2.Text = smbxexedir + "\worlds"
+        TextBox3.Text = smbxexedir + "\smbx.exe"
+
+
+
+    End Sub
 End Class

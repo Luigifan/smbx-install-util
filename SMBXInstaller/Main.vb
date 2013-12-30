@@ -13,20 +13,20 @@ Public Class Main
     Dim xml As New XDocument
     Dim AppDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
     Dim settingsIni As New Setting.IniFile(Environment.CurrentDirectory + "\programsettings.ini")
-    
 
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim oForm As New Settings()
         oForm.ShowDialog()
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IsDestinationReachable("http://rohara.x10.mx/smbxpublisher/appfiles/")
-        
+
         Dim firstRun As String
         firstRun = settingsIni.ReadValue("Settings", "isFirstRun")
-        
+
 
         If My.Computer.FileSystem.FileExists(Environment.CurrentDirectory + "\programsettings.ini") Then
             If firstRun = "True" Then
@@ -59,6 +59,7 @@ Public Class Main
         Me.Size = s
         Button4.Text = "->"
         Label6.Text = My.Application.Info.Version.ToString
+        CheckIfWinter()
         CheckForUpdates()
         RefreshAllItems()
 
@@ -82,7 +83,7 @@ Public Class Main
         repoUpdated.Text = "Repo Updated"
     End Sub
 
-    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
+    Private Sub ListBox1_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         Button3.Enabled = True
         Dim node As XElement = xml...<episode>.First(Function(n) n.Value = ListBox1.Text)
         RichTextBox1.Text = node.@Description
@@ -100,13 +101,13 @@ Public Class Main
         req.Method = "HEAD"
     End Sub
 
-    Private Sub ListBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox2.SelectedIndexChanged
+    Private Sub ListBox2_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox2.SelectedIndexChanged
         Button2.Enabled = True
         Dim SelectWorld As String = CStr(ListBox2.SelectedItem)
 
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         MsgBox("Episode will be downloaded and saved to " + settingsIni.ReadValue("Settings", "worldlocation"))
         Dim EpisodeFolderName As String = xml...<episode>.ToString
         Dim node As XElement = xml...<episode>.First(Function(n) n.Value = ListBox1.Text)
@@ -146,24 +147,14 @@ Public Class Main
         MsgBox("Episode completed extracting! Enjoy!")
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Dim SelectedWorld As String = CStr(ListBox2.SelectedItem)
-        My.Computer.FileSystem.DeleteDirectory(SelectedWorld, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+        My.Computer.FileSystem.DeleteDirectory(SelectedWorld, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin, FileIO.UICancelOption.DoNothing)
         ReloadWorldsDir()
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        If Button4.Text = "->" Then
-            Dim s As Size = Me.Size
-            s.Width = 947
-            Me.Size = s
-            Button4.Text = "<-"
-        ElseIf Button4.Text = "<-" Then
-            Dim s As Size = Me.Size
-            s.Width = 526
-            Me.Size = s
-            Button4.Text = "->"
-        End If
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+       
 
 
     End Sub
@@ -187,21 +178,19 @@ Public Class Main
 
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/Update_Latest.exe", Environment.CurrentDirectory + "\Update.exe", "", "", False, "1000", True)
-        Process.Start("Update.exe")
-        Me.Close()
+    Private Sub LinkLabel1_LinkClicked_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
+        
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+    Private Sub LinkLabel2_LinkClicked_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
         Process.Start("http://smbxsplash.tumblr.com/")
     End Sub
 
-    Private Sub RefreshList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshList.Click
+    Private Sub RefreshList_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshList.Click
         RefreshAllItems()
     End Sub
 
-    Private Sub RefreshWorlds_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshWorlds.Click
+    Private Sub RefreshWorlds_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshWorlds.Click
         ReloadWorldsDir()
     End Sub
 
@@ -226,11 +215,22 @@ Public Class Main
         End Try
         Return reachable
     End Function
+    Public Sub CheckIfWinter()
 
+        If DateAndTime.Today.Month = "12" Or "1" Or "2" Then
+            Me.BackgroundImage = My.Resources.Background_Snow
+            StatusStrip1.BackgroundImage = My.Resources.StatusStrip_Snow
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Else
+            Me.BackgroundImage = My.Resources.Background_Main_Full
+            GroupBox1.Visible = False
+        End If
 
-        My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/SMBX.zip", "C:\SMBX.zip", "", "", True, 1000, True)
+    End Sub
+
+    Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+
+        My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/SMBX.zip", "C:\SMBX.zip", "", "", True, 1000, True, FileIO.UICancelOption.DoNothing)
         Using zip1 As ZipFile = ZipFile.Read("C:\SMBX.zip")
             Dim entry As ZipEntry
             'DEBUG MESSAGES
@@ -245,12 +245,43 @@ Public Class Main
 
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+    Private Sub Button6_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         Dim SMBXExe As String = settingsIni.ReadValue("Settings", "executableloc")
         If My.Computer.FileSystem.FileExists(SMBXExe) Then
             Process.Start(SMBXExe)
         Else
             MsgBox("Can't find " + SMBXExe + " verify it exists or change some settings!", MsgBoxStyle.Critical)
         End If
+    End Sub
+
+    Private Sub Button7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Dim oForm As New XMLMain
+        XMLMain.ShowDialog()
+
+    End Sub
+
+   
+    Private Sub Button4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        If Button4.Text = "->" Then
+            Dim s As Size = Me.Size
+            s.Width = 947
+            Me.Size = s
+            Button4.Text = "<-"
+        ElseIf Button4.Text = "<-" Then
+            Dim s As Size = Me.Size
+            s.Width = 526
+            Me.Size = s
+            Button4.Text = "->"
+        End If
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        My.Computer.Network.DownloadFile("http://rohara.x10.mx/smbxpublisher/appfiles/Update_Latest.exe", Environment.CurrentDirectory + "\Update.exe", "", "", False, "1000", True)
+        Process.Start("Update.exe")
+        Me.Close()
     End Sub
 End Class

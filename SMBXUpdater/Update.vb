@@ -10,6 +10,7 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim CurrentExe As String = Environment.CurrentDirectory + "\SMBXInstaller.exe"
         Dim BackupExe As String = Environment.CurrentDirectory + "\SMBXInstaller_old.exe"
+        Dim CurrentSubmission As String = Environment.CurrentDirectory + "\SMBXSubmission.exe"
 
         If My.Computer.FileSystem.FileExists(BackupExe) Then
             My.Computer.FileSystem.DeleteFile(BackupExe)
@@ -23,25 +24,17 @@
         ElseIf endUpdate = DialogResult.No Then
             Me.Close()
         End If
+        '1.4 update only
+        If My.Computer.FileSystem.FileExists(CurrentSubmission) Then
+            My.Computer.FileSystem.DeleteFile(CurrentSubmission)
+        Else
+            'go about normal business
+        End If
 
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Me.Close()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If Button3.Text = "More Options->" Then
-            Dim s As Size = Me.Size
-            s.Width = 666
-            Me.Size = s
-            Button3.Text = "Collapse<-"
-        ElseIf Button3.Text = "Collapse<-" Then
-            Dim s As Size = Me.Size
-            s.Width = 312
-            Me.Size = s
-            Button3.Text = "More Options->"
-        End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
