@@ -3,17 +3,6 @@
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
     '  of the Project Designer ("Properties" under the "Project" menu).
 <<<<<<< HEAD
-    Public Function GenerateRandomNumber(ByVal min As Integer, ByVal max As Integer) As Integer
-        Dim random As New Random()
-        Return random.Next(1, 5)
-    End Function
-
-    Private Sub LeSplash_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        
-    End Sub
-
-
-=======
 
 
     Private Sub LeSplash_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -44,7 +33,18 @@
         'Copyright.Text = My.Application.Info.Copyright
     End Sub
 
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+=======
+    Public Function GenerateRandomNumber(ByVal min As Integer, ByVal max As Integer) As Integer
+        Dim random As New Random()
+        Return random.Next(1, 5)
+    End Function
+
+    Private Sub LeSplash_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        
+    End Sub
+
+
+>>>>>>> 1.4.1.0 Update
     Private Sub Version_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
@@ -53,10 +53,10 @@
 
     End Sub
 <<<<<<< HEAD
+=======
 
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub
-=======
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
 End Class

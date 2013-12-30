@@ -41,6 +41,17 @@ Partial Class Main
         Me.isUpToDate = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Button6 = New System.Windows.Forms.Button()
 <<<<<<< HEAD
+        Me.Button7 = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+        Me.Button8 = New System.Windows.Forms.Button()
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
+        Me.StatusStrip1.SuspendLayout()
+        CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Toad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -69,18 +80,7 @@ Partial Class Main
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-=======
-        Me.Button7 = New System.Windows.Forms.Button()
-<<<<<<< HEAD
-        Me.Button8 = New System.Windows.Forms.Button()
-=======
->>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
-        Me.StatusStrip1.SuspendLayout()
-        CType(Me.Mario, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Luigi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Toad, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
         CType(Me.IconImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -595,15 +595,15 @@ Partial Class Main
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(920, 482)
 <<<<<<< HEAD
-        Me.Controls.Add(Me.Button7)
-=======
 <<<<<<< HEAD
         Me.Controls.Add(Me.Button8)
 =======
 >>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+=======
+        Me.Controls.Add(Me.Button7)
+>>>>>>> 1.4.1.0 Update
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.IconImage)
         Me.Controls.Add(Me.PictureBox2)
@@ -683,6 +683,12 @@ Partial Class Main
     Friend WithEvents isUpToDate As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Button6 As System.Windows.Forms.Button
 <<<<<<< HEAD
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+<<<<<<< HEAD
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+=======
+>>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
+=======
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Button4 As System.Windows.Forms.Button
@@ -711,12 +717,6 @@ Partial Class Main
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-=======
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-<<<<<<< HEAD
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-=======
->>>>>>> 7b22e1767c1e3c3cd7ba6db508d9837858a1cfa1
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
 
 End Class

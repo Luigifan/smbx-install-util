@@ -36,6 +36,10 @@ Namespace My
         End Sub
         
 <<<<<<< HEAD
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        Protected Overrides Sub OnCreateSplashScreen()
+            Me.SplashScreen = Global.SMBXInstaller.LeSplash
+=======
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateSplashScreen()
             Randomize()
@@ -63,11 +67,7 @@ Namespace My
             Me.SplashScreen = Global.SMBXInstaller.LeSplash
 
 
-=======
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
-        Protected Overrides Sub OnCreateSplashScreen()
-            Me.SplashScreen = Global.SMBXInstaller.LeSplash
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
         End Sub
     End Class
 End Namespace

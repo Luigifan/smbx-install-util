@@ -34,13 +34,13 @@ Partial Class Settings
         Me.Button3 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
 <<<<<<< HEAD
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+=======
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Button4 = New System.Windows.Forms.Button()
-=======
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
         Me.SuspendLayout()
         '
         'Label1
@@ -130,33 +130,33 @@ Partial Class Settings
         Me.CheckBox1.Visible = False
         '
 <<<<<<< HEAD
+=======
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-=======
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
         'Button4
         '
         Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 <<<<<<< HEAD
-        Me.Button4.Location = New System.Drawing.Point(527, 6)
-=======
         Me.Button4.Location = New System.Drawing.Point(527, 67)
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+=======
+        Me.Button4.Location = New System.Drawing.Point(527, 6)
+>>>>>>> 1.4.1.0 Update
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(24, 20)
         Me.Button4.TabIndex = 10
         Me.Button4.UseVisualStyleBackColor = True
         '
 <<<<<<< HEAD
-=======
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+=======
+>>>>>>> 1.4.1.0 Update
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,7 +195,7 @@ Partial Class Settings
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 <<<<<<< HEAD
-    Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
 =======
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+    Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
+>>>>>>> 1.4.1.0 Update
 End Class

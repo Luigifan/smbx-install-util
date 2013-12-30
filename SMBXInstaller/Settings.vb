@@ -55,22 +55,6 @@ Public Class Settings
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 <<<<<<< HEAD
-        
-        Dim smbxexedir = ""
-        Dim fileDialogBox As New OpenFileDialog()
-        FolderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer
-        
-
-        If (FolderBrowserDialog1.ShowDialog = DialogResult.OK) Then
-
-            smbxexedir = FolderBrowserDialog1.SelectedPath
-        End If
-
-        TextBox1.Text = smbxexedir
-        TextBox2.Text = smbxexedir + "\worlds"
-        TextBox3.Text = smbxexedir + "\smbx.exe"
-
-=======
         Dim smbxexe = ""
         Dim smbxexeworld = ""
         Dim smbxexedir = ""
@@ -89,7 +73,23 @@ Public Class Settings
         TextBox3.Text = smbxexe
         TextBox2.Text = smbxdirw
         TextBox3.Text = smbxdir
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+=======
+        
+        Dim smbxexedir = ""
+        Dim fileDialogBox As New OpenFileDialog()
+        FolderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer
+        
+
+        If (FolderBrowserDialog1.ShowDialog = DialogResult.OK) Then
+
+            smbxexedir = FolderBrowserDialog1.SelectedPath
+        End If
+
+        TextBox1.Text = smbxexedir
+        TextBox2.Text = smbxexedir + "\worlds"
+        TextBox3.Text = smbxexedir + "\smbx.exe"
+
+>>>>>>> 1.4.1.0 Update
 
 
     End Sub

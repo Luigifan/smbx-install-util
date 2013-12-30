@@ -39,9 +39,9 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMB
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.test.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.UpdateConfirm.resources
 <<<<<<< HEAD
-=======
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbprojResolveAssemblyReference.cache
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+=======
+>>>>>>> 1.4.1.0 Update
 C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.vbprojResolveAssemblyReference.cache
 C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Main.resources
 C:\smbx-install-util-master-mono\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Resources.resources
@@ -56,8 +56,8 @@ C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMB
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.Help.resources
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\SMBXInstaller.XMLMain.resources
 <<<<<<< HEAD
+=======
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Mike\Documents\GitHub\smbx-install-util\SMBXInstaller\obj\x86\Debug\GenerateResource.write.1.tlog
-=======
->>>>>>> c3f2af5eb1694fa5bc5463746edffee7d5060ca2
+>>>>>>> 1.4.1.0 Update
